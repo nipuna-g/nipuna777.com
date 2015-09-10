@@ -1,0 +1,21 @@
+<!-- Navigation -->
+<div class="row">
+    <div class="col-md-4 text-center" id="header-title">
+        <h1>nipuna777</h1>
+    </div>
+
+    <div class="col-md-8 text-center" style="background: lightgrey; padding:0">
+        <nav class="clearfix">
+            <ul class="clearfix">
+                <li><a href="{{site.baseurl}}/index.html" class="{% if page.url == '/index.html' %}active{% endif %}">Home</a></li>
+                <li><a href="{{site.baseurl}}/about.html" class="{% if page.url == '/about.html' %}active{% endif %}">About</a></li>
+                <li><a href="{{site.baseurl}}/blog.html" class="{% if page.url == '/blog.html' or page.url == '/tutorials.html' %}active{% endif %}">Blog</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" id="pull">Menu</a>
+        </nav>
+    </div>
+
+</div>
+<!-- /.row navbar-->
