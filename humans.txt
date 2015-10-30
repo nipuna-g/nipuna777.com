@@ -1,0 +1,17 @@
+/* TEAM */
+
+Your title: Nipuna Gunathilake
+Site: nipuna777@gmail.com
+Facebook, Twitter, Linkedin: nipuna777.
+Location: Gampaha, Sri Lanka.
+
+/* THANKS */
+Name: Thomas Bradley(https://www.youtube.com/channel/UCj4qGjIQCZdL5nIUaoFHanA) for the Jekyll tutorials
+
+/* TECHNOLOGY */
+- Git + Github
+- Bootstrap 3
+- JQuery
+- Jekyll
+- Markdown
+
