@@ -133,3 +133,13 @@ nav a#pull {
         border-bottom: 1px solid #576979;
     }
 }
+
+/*Formatting navigation logo to not be underlined and colored the default blue color of a link*/
+#nav-logo a {
+    color: white;
+}
+
+#nav-logo a:hover {
+    color: #e3e3e3;
+    text-decoration: none;
+}
