@@ -1,0 +1,23 @@
+{
+  "name": "nipuna777.com",
+  "version": "1.0.0",
+  "description": "Nipuna Gunathilake - Home Page",
+  "main": "index.js",
+  "scripts": {
+    "serve": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nipuna777/nipuna777.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nipuna777/nipuna777.com/issues"
+  },
+  "homepage": "https://github.com/nipuna777/nipuna777.com#readme",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "live-server": "^1.2.0"
+  }
+}
