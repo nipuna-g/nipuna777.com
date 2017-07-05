@@ -1,3 +1,0 @@
-Sitemap: http://nipuna777.github.io/sitemap.xml
-
-User-agent: *
