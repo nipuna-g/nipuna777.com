@@ -4,7 +4,11 @@
   "description": "Nipuna Gunathilake - Home Page",
   "main": "index.js",
   "scripts": {
-    "serve": "live-server"
+    "serve": "live-server ./dist",
+    "start": "npm-run-all --parallel sass-compile serve html-watch",
+    "sass-compile": "node-sass -w src/css/ -o dist/css/",
+    "html-watch": "onchange 'src/*.html' -v -- npm run z:copy-html",
+    "z:copy-html": "copyfiles -f src/*.html dist/"
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,11 @@
   },
   "homepage": "https://github.com/nipuna777/nipuna777.com#readme",
   "devDependencies": {
+    "copyfiles": "^1.2.0",
     "http-server": "^0.10.0",
-    "live-server": "^1.2.0"
+    "live-server": "^1.2.0",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
+    "onchange": "^3.2.1"
   }
 }
