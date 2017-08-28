@@ -1,0 +1,36 @@
+@import 'palette';
+
+.home-page {
+    nav ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        display: block;
+        width: 100%;
+        float: left;
+
+        li {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2em;
+            line-height: 40px;
+            height: 40px;
+            width: 4em;
+            float:left;
+            border: 1px rgba(16, 16, 16, 0.55) dotted;
+            margin-right: .5em;
+
+            a {
+                text-decoration: none;
+                color: $black;
+            }
+        }
+    }
+
+
+    header {
+        h1 {
+            padding-top: 1em;
+        }
+    }
+}
