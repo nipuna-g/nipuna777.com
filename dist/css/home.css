@@ -19,5 +19,8 @@
       text-decoration: none;
       color: #000; }
 
+.home-page img {
+  height: 14em; }
+
 .home-page header h1 {
   padding-top: 1em; }
