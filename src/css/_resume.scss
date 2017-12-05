@@ -1,0 +1,22 @@
+.resume-container {
+    padding: .5em 5em;
+    
+    .work-info {
+        display: flex;
+
+        &__time {
+
+        }
+
+        &__desc {
+            &__title {
+                display: flex;
+                color: red;
+            }
+
+            &__content {
+
+            }
+        }
+    }
+}

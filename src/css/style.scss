@@ -1,5 +1,4 @@
 @import 'palette';
-@import 'home';
 
 *{
     font-family: Arial, Helvetica, sans-serif;
@@ -51,5 +50,8 @@ footer {
 p {
     margin: 1em 0;
 }
+
+@import 'home';
+@import 'resume';
 
 @import 'responsive';
