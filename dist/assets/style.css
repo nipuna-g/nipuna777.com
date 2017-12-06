@@ -66,13 +66,63 @@ p {
 .home-page header h1 {
   padding-top: 1em; }
 
-.resume-container {
+.resume-container__header {
+  padding: 2.5em 5em 1em;
+  background: #2d2d2d;
+  color: #fff; }
+  .resume-container__header h2 {
+    opacity: .5;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 1em; }
+
+.resume-container .section {
   padding: .5em 5em; }
-  .resume-container .work-info {
-    display: flex; }
-    .resume-container .work-info__desc__title {
+  .resume-container .section__title {
+    font-size: 2em;
+    margin: .7em 0;
+    font-weight: 200;
+    border-bottom: 1px dotted #aaa; }
+  .resume-container .section__sub-title {
+    margin-bottom: .5em; }
+  .resume-container .section ul {
+    margin-left: 1em;
+    margin-bottom: 1em;
+    list-style: square; }
+    .resume-container .section ul li {
+      margin-bottom: .2em; }
+      .resume-container .section ul li ul {
+        list-style: circle; }
+  .resume-container .section-achivements .section-info {
+    border: none; }
+
+.resume-container .section-info {
+  display: flex;
+  border-bottom: 1px solid #888;
+  padding-bottom: 1em;
+  margin-bottom: .5em; }
+  .resume-container .section-info__time {
+    display: flex;
+    width: 15em;
+    margin: .5em 0; }
+  .resume-container .section-info__desc {
+    flex: 1; }
+    .resume-container .section-info__desc__title {
       display: flex;
-      color: red; }
+      color: #ac6100;
+      margin: .5em 0; }
+      .resume-container .section-info__desc__title .company {
+        display: flex;
+        flex: 1; }
+      .resume-container .section-info__desc__title .designation {
+        justify-content: flex-end;
+        font-weight: 200; }
+    .resume-container .section-info__desc__content p {
+      margin: 0; }
+    .resume-container .section-info__desc__content ul {
+      list-style: square;
+      margin-left: 2em;
+      margin-bottom: .8em; }
 
 @media only screen and (max-width: 500px) {
   .content {
