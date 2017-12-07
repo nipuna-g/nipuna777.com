@@ -124,6 +124,33 @@ p {
       margin-left: 2em;
       margin-bottom: .8em; }
 
+.portofolio-container__header {
+  padding: 2.5em 5em 1em;
+  background: #2d2d2d;
+  color: #fff; }
+  .portofolio-container__header h2 {
+    opacity: .5;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 1em; }
+
+.portofolio-row {
+  display: flex; }
+  .portofolio-row__item {
+    flex: 1;
+    height: 20em;
+    margin: 1em;
+    padding: 1em;
+    overflow: hidden;
+    color: white;
+    background: #2d2d2d;
+    display: flex;
+    flex-direction: column; }
+    .portofolio-row__item img {
+      max-width: 80%;
+      margin: .8em auto;
+      max-height: 12em; }
+
 @media only screen and (max-width: 500px) {
   .content {
     padding: .5em; }
