@@ -39,7 +39,7 @@ footer {
 p {
   margin: 1em 0; }
 
-.home-page nav ul {
+nav ul {
   list-style: none;
   text-align: center;
   padding: 0;
@@ -47,24 +47,41 @@ p {
   display: block;
   width: 100%;
   float: left; }
-  .home-page nav ul li {
+  nav ul li {
     font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
     line-height: 40px;
     height: 40px;
-    width: 4em;
+    width: 5em;
     float: left;
-    border: 1px rgba(16, 16, 16, 0.55) dotted;
     margin-right: .5em; }
-    .home-page nav ul li a {
+    nav ul li a {
       text-decoration: none;
       color: #000; }
+  nav ul.internal-links li {
+    border: 1px rgba(16, 16, 16, 0.151) dotted; }
+    nav ul.internal-links li:hover {
+      border: 1px rgba(16, 16, 16, 0.25) dotted;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+      background-color: #b8b8b8;
+      cursor: pointer; }
+    nav ul.internal-links li.active {
+      background-color: #c7c7c7; }
+  nav ul.external-links {
+    margin-top: .5em;
+    margin-bottom: .5em; }
+    nav ul.external-links li {
+      border: none;
+      font-size: 1em;
+      width: auto; }
+      nav ul.external-links li a:hover {
+        text-decoration: underline; }
+
+header h1 {
+  padding-top: 1em; }
 
 .home-page img {
   height: 14em; }
-
-.home-page header h1 {
-  padding-top: 1em; }
 
 .resume-container__header {
   padding: 2.5em 5em 1em;
