@@ -47,6 +47,9 @@ nav ul {
   display: block;
   width: 100%;
   float: left; }
+  nav ul a {
+    text-decoration: none;
+    color: #000; }
   nav ul li {
     font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
@@ -55,9 +58,6 @@ nav ul {
     width: 5em;
     float: left;
     margin-right: .5em; }
-    nav ul li a {
-      text-decoration: none;
-      color: #000; }
   nav ul.internal-links li {
     border: 1px rgba(16, 16, 16, 0.151) dotted; }
     nav ul.internal-links li:hover {
