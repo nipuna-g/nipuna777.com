@@ -182,3 +182,43 @@ nav ul li:hover {
         flex-direction: column;
     }
 }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form__input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5em;
+}
+
+.contact-form__input label {
+    font-weight: bold;
+    margin-bottom: .5em;
+    margin-top: 1em;
+}
+
+.contact-form__input input {
+    font-size: 1em;
+    padding: .3em;
+}
+
+.contact-form__input textarea {
+    font-size: 1.2em;
+    padding: .3em;
+    height: 5em;
+}
+
+.contact-form button {
+    background: #eee;
+    border: 1px dotted #aaa;
+    padding: .3em;
+    font-size: 1em;
+}
+
+.contact-form button:hover {
+    background: #ddd;
+    cursor: pointer;
+}
