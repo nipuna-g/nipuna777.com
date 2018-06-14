@@ -259,20 +259,21 @@ nav ul li:hover {
 .blog-container .blog-item .date{
     color: #444;
     font-size: .85em;
-    margin-bottom: 1.5em;
     padding-left: .5em;
 }
 .blog-container .blog-item h2{
     background: #eee;
     color: #000;
 }
-.blog-container .blog-item p{
+.blog-container .blog-item .summary{
     margin: auto .5em;
-    height: 8em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: pre-line;
-    border-bottom: 1px solid #888;
+}
+
+.blog-container .blog-item .summary p{
+    height: 7em;
 }
 
 @media(max-width: 600px) {
