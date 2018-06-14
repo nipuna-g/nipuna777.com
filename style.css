@@ -280,3 +280,21 @@ nav ul li:hover {
         grid-template-columns: 1fr;
     }
 }
+
+.project-item {
+    display: grid;
+    grid-gap: .5em;
+    grid-template-columns: min-content 1fr;
+}
+
+.project-item h2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+}
+
+.project-item img{
+    width: 20em;
+    padding: .4em;
+    border: 1px solid gray;
+}
