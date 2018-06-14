@@ -2,6 +2,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h2{
+    font-size: 1.2rem;
+    margin: .5em auto;
+    background: #777;
+    padding: .5em;
+    color: white;
+}
+
 .header h1 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
@@ -74,10 +82,29 @@ nav ul li:hover {
     margin: 0 auto;
 }
 
+.jumbotron .blurb {
+    align-items: center;
+    display: flex;
+}
+
 .jumbotron p{
     border-radius: 50%;
     text-align: center;
     font-size: 1.5em;
+}
+
+.jumbotron .social-links {
+    display: flex;
+    width: 100%;
+}
+
+.jumbotron li {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.jumbotron li a {
+    color: black;
 }
 
 @media(max-width: 600px) {
@@ -94,22 +121,14 @@ nav ul li:hover {
     }
 }
 
-.section h2{
-    font-size: 1.2em;
-    margin: .5em auto;
-    background: #777;
-    padding: .2em;
-    color: white;
-}
-
 .section p{
     margin-bottom: .75em;
 }
 
 .resume-container .section__title {
-    font-size: 2em;
+    /* font-size: 2em;
     margin: .7em 0;
-    font-weight: 200;
+    font-weight: 200; */
 }
 
 .resume-container .section__sub-title {
@@ -221,4 +240,43 @@ nav ul li:hover {
 .contact-form button:hover {
     background: #ddd;
     cursor: pointer;
+}
+
+.blog-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: 2em;
+}
+
+.blog-container .blog-item{
+    min-width: 0;
+}
+.blog-container .blog-item img {
+    width: 100%;;
+}
+.blog-container .blog-item .date{
+    color: #444;
+    font-size: .85em;
+    margin-bottom: 1.5em;
+    padding-left: .5em;
+}
+.blog-container .blog-item h2{
+    background: #eee;
+    color: #000;
+}
+.blog-container .blog-item p{
+    margin: auto .5em;
+    height: 8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+    border-bottom: 1px solid #888;
+}
+
+@media(max-width: 600px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
 }
