@@ -72,11 +72,11 @@ nav ul li:hover {
     grid-template-rows: 1fr min-content;
     grid-gap: 2em;
     text-align: center;
-    margin-bottom: 1.5em;
-    margin-top: 1.5em;
+    margin-bottom: 2.5em;
+    margin-top: 2.5em;
 }
 
-.jumbotron img{
+.jumbotron img.profile-img{
     height: 18em;
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: .5em;
@@ -102,13 +102,24 @@ nav ul li:hover {
     width: 100%;
 }
 
+.jumbotron .social-links .social-logo{
+    width: 2em;
+    margin-right: .4em;
+}
+
 .jumbotron li {
+    display: flex;
     flex-grow: 1;
     flex-basis: 0;
 }
 
 .jumbotron li a {
     color: black;
+    display: flex;
+    height: 2em;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 auto;
 }
 
 @media(max-width: 600px) {
@@ -116,7 +127,7 @@ nav ul li:hover {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto min-content auto;
-        grid-gap: .5em;
+        grid-gap: .75em;
     }
     
     .jumbotron img{
