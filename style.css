@@ -179,6 +179,13 @@ nav ul li:hover {
     list-style: circle;
 }
 
+.resume-container h3 {
+    color: black;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
 .resume-container .section-achivements .section-info {
     border: none;
 }
@@ -202,8 +209,11 @@ nav ul li:hover {
 
 .resume-container .section-info__desc__title {
     display: flex;
-    color: #ac6100;
     margin: .5em 0;
+}
+
+.resume-container .section-info__desc__title h3{
+    color: #ac6100;
 }
 
 .resume-container .section-info__desc__title .company {
