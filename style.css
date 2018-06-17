@@ -322,3 +322,24 @@ nav ul li:hover {
         display: block;
     }
 }
+.blog-header {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blog-header h1 {
+    color:red;
+    font-size: 2em;
+    background: #777;
+    padding: .5em;
+    color: white;
+}
+
+.blog-header img {
+    align-self: center;
+}
+
+.blog-content h1{
+}
