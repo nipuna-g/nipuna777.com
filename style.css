@@ -27,11 +27,15 @@ h3{
     color: white;
 }
 
-.header h1 {
-    font-family: 'Courier New', Courier, monospace;
+.header h1{
     font-size: 2em;
     text-align: center;
     margin: .3em auto;
+}
+
+.header h1 a {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
 }
 
 .content {
@@ -193,10 +197,6 @@ nav ul li:hover {
     padding: 0;
 }
 
-.resume-container .section-achivements .section-info {
-    border: none;
-}
-
 .resume-container .section-info {
     display: flex;
     border-bottom: 1px solid #888;
@@ -208,6 +208,7 @@ nav ul li:hover {
     display: flex;
     width: 12em;
     margin: .5em 0;
+    font-weight: bold;
 }
 
 .resume-container .section-info__desc {
@@ -231,10 +232,6 @@ nav ul li:hover {
 .resume-container .section-info__desc__title .designation {
     justify-content: flex-end;
     font-weight: 200;
-}
-
-.resume-container .section-info__desc__content p {
-    margin: 0;
 }
 
 .resume-container .section-info__desc__content ul {
