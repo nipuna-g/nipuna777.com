@@ -1,6 +1,8 @@
 /* common */
+@import url('https://fonts.googleapis.com/css?family=Bitter|Niramit');
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Niramit', sans-serif;
 }
 
 h1{
@@ -31,10 +33,11 @@ h3{
     font-size: 2em;
     text-align: center;
     margin: .3em auto;
+    margin-top: 0;
 }
 
 .header h1 a {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Bitter', serif;
     color: white;
 }
 
@@ -68,22 +71,22 @@ nav ul a {
 }
 
 nav ul a li {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Bitter', serif;
     text-align: center;
     margin: .5em;
     padding: .5em;
-    border-bottom: 1px solid #aaa;
+    font-size: 1.5em;
 }
 
 nav ul li.active{
     font-weight: bold;
-    border-bottom: 3px solid #aaa;
+    background: rgba(0, 0, 0, 0.1);
 }
 
 nav ul li:hover {
     background: #aaa;
     transition: .3s;
-    transform: scale(1.1);
+    transform: opacity(.1);
 }
 
 
@@ -327,12 +330,6 @@ nav ul li:hover {
     height: 7em;
 }
 
-@media(max-width: 600px) {
-    .blog-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* project page */
 .project-item {
     display: grid;
@@ -352,11 +349,6 @@ nav ul li:hover {
     border: 1px solid gray;
 }
 
-@media(max-width: 600px) {
-    .project-item {
-        display: block;
-    }
-}
 .blog-header {
     display: flex;
     justify-content: center;
@@ -392,4 +384,22 @@ nav ul li:hover {
 .blog-content ul{
     list-style: disc;
     padding: 0 2em;
+}
+
+@media(max-width: 600px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+
+    .jumbotron .blurb {
+        margin: .75em 0;
+    }
+
+    .project-item {
+        display: block;
+    }
+
+    nav ul a li {
+        font-size: 1em;
+    }
 }
