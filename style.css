@@ -1,5 +1,6 @@
 /* common */
 @import url('https://fonts.googleapis.com/css?family=Bitter|Niramit');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
 
 * {
     font-family: 'Niramit', sans-serif;
@@ -171,6 +172,45 @@ nav ul li:hover {
 }
 
 /* resume */
+.resume-container .resume-header {
+    display: flex;
+}
+
+.resume-container .resume-header  img{
+    width: 7.5em;
+    margin-top: 1em;
+    border-radius: 2px;
+    border: 4px solid #ddd;
+}
+
+.resume-container .resume-header  h1{
+    background: white;
+    color: black;
+    padding: 0;
+    margin-bottom: .2em;
+    font-size: 2em;
+}
+
+.resume-container .resume-header  h3{
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-bottom: .5em;
+}
+
+.resume-container .resume-header .information {
+    flex: 1;
+}
+
+.resume-container .resume-header .info-item{
+    margin-bottom: .25em;
+}
+
+.resume-container .resume-header .info-item strong{
+    display: block;
+    float: left;
+    width: 70px;
+}
+
 .resume-container .section p{
     margin-bottom: .75em;
 }
@@ -243,7 +283,7 @@ nav ul li:hover {
     margin-bottom: .8em;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 400px) {
     .resume-container .section-info{
         flex-direction: column;
     }
@@ -401,5 +441,20 @@ nav ul li:hover {
 
     nav ul a li {
         font-size: 1em;
+    }
+}
+
+@media print {
+    * {
+        font-family: 'Crimson Text', serif;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .resume-container .section-info {
+        border-bottom: none;
+        margin-bottom: 0;
     }
 }
