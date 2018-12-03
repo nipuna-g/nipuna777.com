@@ -16,7 +16,7 @@ h1{
 
 h2{
     font-size: 1.2rem;
-    margin: .5em auto;
+    margin: 2em auto .8em;
     background: #777;
     padding: .5em;
     color: white;
@@ -194,11 +194,31 @@ nav ul li:hover {
 .resume-container .resume-header  h3{
     font-weight: 300;
     font-size: 1.5em;
-    margin-bottom: .5em;
+    margin-bottom: .75em;
 }
 
 .resume-container .resume-header .information {
     flex: 1;
+}
+
+.resume-container .resume-header .information .header-title{
+    display: flex;
+}
+
+.resume-container .resume-header .information .header-title h1{
+    margin-bottom: .5em;
+}
+
+.resume-container .resume-header .information .header-items{
+    width: 50%;
+    float: left;
+}
+
+.resume-container .resume-header .information .header-title h3{
+    flex: 1;
+    line-height: 32px;
+    margin: .75em auto;
+    align-self: end;
 }
 
 .resume-container .resume-header .info-item{
