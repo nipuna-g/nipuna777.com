@@ -407,7 +407,6 @@ nav ul li:hover {
 .blog-container {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
     margin-bottom: 2em;
 }
@@ -417,30 +416,36 @@ nav ul li:hover {
     display: flex;
     flex-direction: column;
     margin: .5em;
+    padding: 1em;
+    box-shadow: 0 4px 6px hsla(0, 0%, 0%, .1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .blog-container .blog-item img {
-    height: 12em;
     align-items: center;
     align-self: center;
     max-width: 100%;
 }
 .blog-container .blog-item .date{
+    display: none;
     color: #444;
     font-size: .85em;
-    padding-left: .5em;
+    margin-bottom: 1em;
 }
 .blog-container .blog-item h2{
-    width: 100%;
+    font-size: 1.5em;
+    width: auto;
+    background: none;
+    color: black;
+    margin: 1rem 0;
+    padding: 0;
 }
 .blog-container .blog-item .summary{
-    margin: auto .5em;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: pre-line;
 }
 
 .blog-container .blog-item .summary p{
-    height: 7em;
+    max-height: 7em;
+    margin: 1.2rem 0 .5rem;
 }
 
 /* project page */
