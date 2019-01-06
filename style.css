@@ -134,11 +134,11 @@ nav ul li a {
 
 nav ul li.active{
     font-weight: bold;
-    background: #D9E2EC;
+    background: #FFF3C4;
 }
 
 nav ul li:hover {
-    background: #BCCCDC;
+    background: #FCE588;
     transition: .3s;
     transform: opacity(.1);
 }
@@ -238,14 +238,14 @@ nav ul li:hover {
 }
 
 .resume-container .resume-header  h1{
-    background: white;
-    color: black;
+    color: #003E6B;
     padding: 0;
     margin-bottom: .2em;
     font-size: 2em;
 }
 
 .resume-container .resume-header  h3{
+    color: #0A558C;
     font-weight: 300;
     font-size: 1.5em;
     margin-bottom: .75em;
@@ -393,14 +393,15 @@ nav ul li:hover {
 }
 
 .contact-form button {
-    background: #FFF3C4;
-    border: 1px solid #FCE588;
+    background: #DE911D;
+    border: 1px solid #CB6E17;
     padding: .3em;
     font-size: 1em;
+    font-weight: bold;
 }
 
 .contact-form button:hover {
-    background: #FCE588;
+    background: #CB6E17;
     cursor: pointer;
 }
 
