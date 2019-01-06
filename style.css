@@ -52,7 +52,6 @@ table {
 
 
 /* common */
-
 * {
     font-family: 'Niramit', sans-serif;
 }
@@ -60,17 +59,16 @@ table {
 h1{
     font-size: 1.2rem;
     margin: .5em auto;
-    background: #444;
     padding: .5em;
-    color: white;
 }
 
 h2{
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin: 2em auto .8em;
-    background: #777;
-    padding: .5em;
-    color: white;
+    /* background: #777; */
+    padding: .3rem 0;
+    color: #0A558C;
+    border-bottom: 2px solid;
 }
 
 h3{
@@ -86,11 +84,13 @@ h3{
     text-align: center;
     margin: .3em auto;
     margin-top: 0;
+    color: #D9E2EC;
+    background: #003E6B;
 }
 
 .header h1 a {
     font-family: 'Bitter', serif;
-    color: white;
+    color: #F0F4F8;
 }
 
 .content {
@@ -128,17 +128,17 @@ nav ul li a {
     box-sizing: border-box;
     padding: .5em 0;    font-family: 'Bitter', serif;
     font-size: 1.5rem;
-    color: black;
+    color: #102A43;
     text-decoration: none;
 }
 
 nav ul li.active{
     font-weight: bold;
-    background: rgba(0, 0, 0, 0.1);
+    background: #D9E2EC;
 }
 
 nav ul li:hover {
-    background: #aaa;
+    background: #BCCCDC;
     transition: .3s;
     transform: opacity(.1);
 }
@@ -173,6 +173,7 @@ nav ul li:hover {
 .jumbotron p{
     border-radius: 50%;
     text-align: center;
+    line-height: 1.5em;
     font-size: 1.5em;
 }
 
@@ -337,7 +338,7 @@ nav ul li:hover {
 }
 
 .resume-container .section-info__desc__title h3{
-    color: #ac6100;
+    color: #186FAF;
 }
 
 .resume-container .section-info__desc__title .company {
@@ -392,14 +393,14 @@ nav ul li:hover {
 }
 
 .contact-form button {
-    background: #eee;
-    border: 1px dotted #aaa;
+    background: #FFF3C4;
+    border: 1px solid #FCE588;
     padding: .3em;
     font-size: 1em;
 }
 
 .contact-form button:hover {
-    background: #ddd;
+    background: #FCE588;
     cursor: pointer;
 }
 
@@ -432,10 +433,8 @@ nav ul li:hover {
     margin-bottom: 1em;
 }
 .blog-container .blog-item h2{
-    font-size: 1.5em;
     width: auto;
     background: none;
-    color: black;
     margin: 1rem 0;
     padding: 0;
 }
