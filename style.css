@@ -504,6 +504,12 @@ nav ul li:hover {
     padding: 0 2em;
 }
 
+.readings-content {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    list-style: disc;
+}
+
 @media(max-width: 600px) {
     .blog-container {
         grid-template-columns: 1fr;
