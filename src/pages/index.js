@@ -20,6 +20,7 @@ const logoItem = {
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
+    profile,
   },
 }) => (
   <Layout>
@@ -72,14 +73,14 @@ const IndexPage = ({
             </a>
           </ul>
         </div>
-        <img
+        <Img
           style={{
             borderRadius: "50%",
             height: "280px",
             width: "280px",
           }}
+          fluid={profile.childImageSharp.fluid}
           alt="Nipuna profile"
-          src="https://nipuna777.com/assets/profile.jpg"
         />
       </div>
     </FullWidthContent>
@@ -208,6 +209,13 @@ export const pageQuery = graphql`
               }
             }
           }
+        }
+      }
+    }
+    profile: file(relativePath: { eq: "nipuna-profile.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 400, maxHeight: 400) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
