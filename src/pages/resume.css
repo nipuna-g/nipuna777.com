@@ -1,0 +1,139 @@
+/* resume */
+.resume-container .resume-header {
+  display: flex;
+}
+
+.resume-container .resume-header img {
+  width: 7.5em;
+  margin-top: 1em;
+  border-radius: 2px;
+  border: 4px solid #ddd;
+}
+
+.resume-container .resume-header h1 {
+  color: #003e6b;
+  padding: 0;
+  margin-bottom: 0.2em;
+  font-size: 2em;
+}
+
+.resume-container .resume-header h3 {
+  color: #0a558c;
+  font-weight: 300;
+  font-size: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.resume-container .resume-header .information {
+  flex: 1;
+}
+
+.resume-container .resume-header .information .header-title {
+  display: flex;
+  align-items: flex-end;
+}
+
+.resume-container .resume-header .information .header-title h1 {
+  margin-bottom: 0.5em;
+  padding-top: 40px;
+}
+
+.resume-container .resume-header .information .header-items {
+  width: 50%;
+  float: left;
+}
+
+.resume-container .resume-header .information .header-title h3 {
+  flex: 1;
+  line-height: 32px;
+  margin: 0.75em auto;
+  align-self: end;
+}
+
+.resume-container .resume-header .info-item {
+  margin-bottom: 0.25em;
+}
+
+.resume-container .resume-header .info-item strong {
+  display: block;
+  float: left;
+  min-width: 82px;
+}
+
+.resume-container .section p {
+  margin-bottom: 0.75em;
+}
+
+.resume-container .section__sub-title {
+  margin-bottom: 0.5em;
+}
+
+.resume-container .section ul {
+  margin-left: 2em;
+  margin-bottom: 1em;
+  list-style: square;
+}
+
+.resume-container .section ul li {
+  margin-bottom: 0.2em;
+}
+
+.resume-container .section ul li ul {
+  list-style: circle;
+}
+
+.resume-container h3 {
+  color: black;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-container .section-info {
+  display: flex;
+  border-bottom: 1px solid #888;
+  padding-bottom: 1em;
+  margin-bottom: 0.5em;
+}
+
+.resume-container .section-info__time {
+  display: flex;
+  width: 12em;
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+.resume-container .section-info__desc {
+  flex: 1;
+}
+
+.resume-container .section-info__desc__title {
+  display: flex;
+  margin: 0.5em 0;
+}
+
+.resume-container .section-info__desc__title h3 {
+  color: #186faf;
+}
+
+.resume-container .section-info__desc__title .company {
+  display: flex;
+  flex: 1;
+}
+
+.resume-container .section-info__desc__title .designation {
+  justify-content: flex-end;
+  font-weight: 200;
+}
+
+.resume-container .section-info__desc__content ul {
+  list-style: square;
+  margin-left: 2em;
+  margin-bottom: 0.8em;
+}
+
+@media (max-width: 400px) {
+  .resume-container .section-info {
+    flex-direction: column;
+  }
+}
