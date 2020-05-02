@@ -8,14 +8,7 @@ import EnvelopeIcon from "../images/icons/envelope.svg";
 import LinkedInIcon from "../images/icons/linkedin.svg";
 import StackOverflowIcon from "../images/icons/stackoverflow.svg";
 import Img from "gatsby-image";
-
-const logoItem = {
-  padding: 0,
-  margin: 0,
-  textAlign: "center",
-  marginRight: "10px",
-  height: "30px",
-};
+import "./index.css";
 
 const IndexPage = ({
   data: {
@@ -31,71 +24,38 @@ const IndexPage = ({
           "linear-gradient(180deg, rgba(221,239,255,1) 0%, rgba(255,255,255,1) 100%)",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: "30px 0",
-          borderBottom: "1px solid #DFE3F8",
-        }}
-      >
-        <div
-          style={{
-            width: "400px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
+      <div className="hero-container">
+        <div className="hero-container__inner">
           <h2 style={{ fontSize: "50px" }}>Nipuna Gunathilake</h2>
           <p>
             Hello! I am a software engineer who loves building great products.
           </p>
-          <ul
-            style={{
-              display: "flex",
-              listStyle: "none",
-              margin: 0,
-              padding: 0,
-            }}
-          >
+          <ul className="logo-items">
             <a href="https://github.com/nipuna777/">
-              <GithubIcon aria-label="Github" style={logoItem} />
+              <GithubIcon aria-label="Github" className="logo-item" />
             </a>
             <a href="https://www.linkedin.com/in/nipuna777">
-              <LinkedInIcon style={logoItem} />
+              <LinkedInIcon className="logo-item" />
             </a>
             <a href="https://stackoverflow.com/users/3156644/nipuna777">
-              <StackOverflowIcon style={logoItem} />
+              <StackOverflowIcon className="logo-item" />
             </a>
             <a href="mailto:nipuna777@gmail.com">
-              <EnvelopeIcon style={logoItem} />
+              <EnvelopeIcon className="logo-item" />
             </a>
           </ul>
         </div>
         <Img
-          style={{
-            borderRadius: "50%",
-            height: "280px",
-            width: "280px",
-          }}
+          className="hero-container__profile-photo"
           fluid={profile.childImageSharp.fluid}
           alt="Nipuna profile"
         />
       </div>
     </FullWidthContent>
     <FullWidthContent>
-      <div style={{ borderBottom: "1px solid #DFE3F8" }}>
+      <div className="blog-post-container">
         <SectionTitle title="Blog Posts" viewAllLink="/blog" />
-        <div
-          style={{
-            display: "flex",
-            marginTop: "30px",
-            marginBottom: "20px",
-            flexWrap: "wrap",
-            marginRight: "-20px",
-          }}
-        >
+        <div className="blog-post-container__inner">
           {edges
             .filter(edge => !edge.node.frontmatter.type)
             .map(edge => (
@@ -140,21 +100,14 @@ const pastalColors = [
 const ProjectPreview = ({ index, post, title, excerpt }) => (
   <div style={{ backgroundColor: pastalColors[index % 6] }}>
     <FullWidthContent>
-      <div style={{ display: "flex", margin: "50px 0" }}>
+      <div className="project-preview">
         <div>
           <h4>{title}</h4>
           <p>{excerpt} </p>
           <a href="/work">Explore</a>
         </div>
         <Img
-          style={{
-            margin: 0,
-            padding: 0,
-            marginLeft: 30,
-            minWidth: 350,
-            height: 250,
-            backgroundColor: "#eee",
-          }}
+          className="project-preview__image"
           fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
         />
       </div>
@@ -163,16 +116,7 @@ const ProjectPreview = ({ index, post, title, excerpt }) => (
 );
 
 const BlogPostPreview = ({ title, excerpt, path }) => (
-  <div
-    style={{
-      maxWidth: "452px",
-      minWidth: "220px",
-      padding: "40px",
-      border: "1px solid lightgrey",
-      marginBottom: "20px",
-      marginRight: "20px",
-    }}
-  >
+  <div className="blog-post-preview">
     <h3>{title}</h3>
     <p>{excerpt}</p>
     <Link to={path}>Read More</Link>
@@ -180,12 +124,8 @@ const BlogPostPreview = ({ title, excerpt, path }) => (
 );
 
 const SectionTitle = ({ title, viewAllLink }) => (
-  <div
-    style={{ display: "flex", marginTop: "50px", alignItems: "last baseline" }}
-  >
-    <h1 style={{ margin: 0, fontWeight: "lighter", marginRight: "10px" }}>
-      {title}
-    </h1>
+  <div className="section-title">
+    <h1 className="section-title-header">{title}</h1>
     <a href={viewAllLink}>View All</a>
   </div>
 );
