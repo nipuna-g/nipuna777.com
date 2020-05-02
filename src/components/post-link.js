@@ -1,38 +1,25 @@
 import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
+import "./post-link.css";
 
 const PostLink = ({ post }) => (
-  <div
-    style={{
-      display: "flex",
-      maxHeight: 300,
-      marginBottom: 20,
-    }}
-  >
+  <div className="post-link-container">
     <Img
-      style={{ margin: 0, width: 170, height: 170, backgroundColor: "#eee" }}
+      className="post-link-image"
       fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
     />
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        flex: 1,
-        padding: 10,
-        paddingLeft: 20,
-        paddingRight: 20,
-        border: "1px solid #b5cce3",
-      }}
-    >
-      <h3 style={{ margin: 0, padding: 0 }}>{post.frontmatter.title}</h3>
-      <span style={{ fontSize: 12 }}>{post.frontmatter.date}</span>
-      <p style={{ marginBottom: 5, fontSize: 14, lineHeight: 1.5 }}>
-        {post.excerpt}
-      </p>
+    <div className="post-link-text-container">
+      <h3 className="post-link-text-container__header">
+        {post.frontmatter.title}
+      </h3>
+      <span className="post-link-text-container__date">
+        {post.frontmatter.date}
+      </span>
+      <p className="post-link-text-container__excerpt">{post.excerpt}</p>
       <Link
         to={post.frontmatter.path}
-        style={{ textDecoration: "none", fontSize: 14 }}
+        className="post-link-text-container__link"
       >
         Read More...
       </Link>

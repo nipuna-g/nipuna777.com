@@ -4,6 +4,7 @@ import SEO from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import PageTitle from "../components/page-title";
 import Img from "gatsby-image";
+import "./work.css";
 
 const WorkPage = ({
   data: {
@@ -78,7 +79,7 @@ const ProjectItem = ({ post, index }) => {
       }}
     >
       <FullWidthContent>
-        <div style={{ display: "flex" }}>
+        <div className="product-container">
           <div>
             <h2 style={{ fontWeight: 500 }}>{post.frontmatter.title}</h2>
             <p>{post.excerpt}</p>
@@ -126,13 +127,7 @@ const ProjectItem = ({ post, index }) => {
             }}
           >
             <Img
-              style={{
-                margin: 0,
-                padding: 0,
-                minWidth: 300,
-                height: 200,
-                backgroundColor: "#eee",
-              }}
+              className="product-container__image"
               fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
             />
           </div>

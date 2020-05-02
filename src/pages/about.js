@@ -4,6 +4,7 @@ import SEO from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import PageTitle from "../components/page-title";
 import Img from "gatsby-image";
+import "./about.css";
 
 const AboutPage = ({ data: { profile } }) => (
   <Layout>
@@ -12,7 +13,7 @@ const AboutPage = ({ data: { profile } }) => (
       <PageTitle title="About" />
     </FullWidthContent>
     <FullWidthContent>
-      <div style={{ display: "flex", flexDirection: "row" }}>
+      <div className="about-container">
         <div>
           <h2>Hello, I am Nipuna Gunathilake.</h2>
           <p>

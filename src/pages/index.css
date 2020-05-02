@@ -105,6 +105,15 @@
   }
 
   .project-preview__image {
+    display: flex;
+    margin: 0;
+    padding: 0;
     margin-bottom: 20px;
+    background-color: #eee;
+    max-width: 80vw;
+  }
+
+  .blog-post-preview:nth-child(odd) {
+    margin-right: 0;
   }
 }
