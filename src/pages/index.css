@@ -68,6 +68,11 @@
   padding: 40px;
   border: 1px solid lightgrey;
   margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
+}
+.blog-post-preview:hover {
+  background-color: #f8f9ff;
 }
 
 .blog-post-preview:nth-child(odd) {
@@ -77,6 +82,11 @@
 .project-preview {
   display: flex;
   margin: 50px 0;
+}
+
+.blog-post-preview__excerpt {
+  padding: 0;
+  margin: 0;
 }
 
 .project-preview__image {

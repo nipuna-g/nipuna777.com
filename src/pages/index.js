@@ -116,11 +116,10 @@ const ProjectPreview = ({ index, post, title, excerpt }) => (
 );
 
 const BlogPostPreview = ({ title, excerpt, path }) => (
-  <div className="blog-post-preview">
+  <Link className="blog-post-preview">
     <h3>{title}</h3>
-    <p>{excerpt}</p>
-    <Link to={path}>Read More</Link>
-  </div>
+    <p className="blog-post-preview__excerpt">{excerpt}</p>
+  </Link>
 );
 
 const SectionTitle = ({ title, viewAllLink }) => (

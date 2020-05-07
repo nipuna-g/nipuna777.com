@@ -2,6 +2,11 @@
   display: flex;
   max-height: 300px;
   margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.post-link-container:hover {
+  background-color: #f8f9ff;
 }
 
 .post-link-image {
@@ -19,6 +24,8 @@
   padding-left: 20px;
   padding-right: 20px;
   border: 1px solid #b5cce3;
+  text-decoration: none;
+  color: #000;
 }
 
 .post-link-text-container__header {

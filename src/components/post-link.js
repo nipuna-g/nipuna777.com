@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import "./post-link.css";
 
 const PostLink = ({ post }) => (
-  <div className="post-link-container">
+  <Link to={post.frontmatter.path} className="post-link-container">
     <Img
       className="post-link-image"
       fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
@@ -17,13 +17,7 @@ const PostLink = ({ post }) => (
         {post.frontmatter.date}
       </span>
       <p className="post-link-text-container__excerpt">{post.excerpt}</p>
-      <Link
-        to={post.frontmatter.path}
-        className="post-link-text-container__link"
-      >
-        Read More...
-      </Link>
     </div>
-  </div>
+  </Link>
 );
 export default PostLink;

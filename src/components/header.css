@@ -5,7 +5,7 @@
 .header__wrapper {
   display: flex;
   padding: 1rem 1.0875rem;
-  align-items: center;
+  align-items: flex-end;
   max-width: 960px;
   margin: 0 auto;
 }
