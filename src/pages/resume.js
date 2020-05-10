@@ -46,32 +46,26 @@ const ResumePage = () => (
         <div className="section">
           <h2 className="section__title">Skills</h2>
 
-          <ul>
+          <ul className="section__no-style-list">
             <li>
-              Web Development:{" "}
-              <strong>HTML, CSS, SASS, AngularJS, Angular, React</strong>
+              Frontend Development:
+              <strong>
+                HTML/CSS/SASS, Angular, ReactJS, React Native, Flutter
+              </strong>
             </li>
             <li>
-              Programming Languages:{" "}
-              <strong>JavaScript, TypeScript, Java, C#</strong>
+              Programming Languages:
+              <strong>JavaScript, TypeScript, Dart</strong>
             </li>
             <li>
-              Testing: <strong>Karma, Jasmine, Selenium</strong>
+              Testing: <strong>Karma, Jasmine, Selenium, Cypress, Detox</strong>
             </li>
             <li>
-              Backend development: <strong>Firebase, NodeJS</strong>
+              Backend Development: <strong>Firebase, NodeJS</strong>
             </li>
             <li>
-              Version Control: <strong>Git, GitLab, GitHub</strong>
-            </li>
-          </ul>
-
-          <hr />
-          <ul>
-            <li>Excellent Communication skills in English and Sinhalese</li>
-            <li>
-              Team player who is highly motivated to learn the latest
-              technologies
+              Other Tools & Technologies:{" "}
+              <strong>Git/Github, Figma, Gatsby, AWS, MapboxGL</strong>
             </li>
           </ul>
         </div>
@@ -80,69 +74,133 @@ const ResumePage = () => (
           <h2 className="section__title">Work Experience</h2>
 
           <div className="section-info">
-            <div className="section-info__time">2019-April - Present</div>
+            <div className="section-info__time">
+              2019-April <br /> Present
+            </div>
             <div className="section-info__desc">
               <div className="section-info__desc__title">
-                <h3 className="company">Beam</h3>
+                <h3 className="company">Beam Mobility Holdings Pte. Ltd</h3>
                 <h3 className="designation">Frontend Engineer</h3>
               </div>
-              <div className="section-info__desc__content"></div>
+              <div className="section-info__desc__content">
+                <ul>
+                  <li>
+                    Completed UI overhaul of the <strong>React Native</strong>{" "}
+                    application by using re-usable styled-components.
+                  </li>
+                  <li>
+                    Integrated <strong>MapboxGL</strong> maps to allow for
+                    customizable interactive maps to match designs
+                  </li>
+                  <li>
+                    Added <strong>TypeScript</strong> support and end to end
+                    tests using <strong>Detox</strong> helping cut down on
+                    testing time
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
           <div className="section-info">
-            <div className="section-info__time">2017-Feb - 2019-March</div>
+            <div className="section-info__time">
+              2017-Feb <br /> 2019-March
+            </div>
             <div className="section-info__desc">
               <div className="section-info__desc__title">
-                <h3 className="company">IFS</h3>
+                <h3 className="company">IFS R&D International (Pvt) Ltd</h3>
                 <h3 className="designation">Software Engineer</h3>
               </div>
               <div className="section-info__desc__content">
-                Working on a complex Angular client while creating and
-                maintaining a complete suite of automated tests.
+                <ul>
+                  <li>
+                    Developed a complex <strong>Angular</strong> client for a
+                    planning and scheduling optimization application
+                  </li>
+                  <li>
+                    Created and maintained a complete suite of automated tests
+                    using <strong>Selenium</strong>
+                  </li>
+                  <li>
+                    Implemented lazy loaded modules for the single page
+                    application making it load 20% faster
+                  </li>
+                  <li>
+                    Assisted the onboarding process of new engineers into the
+                    team
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
           <div className="section-info">
-            <div className="section-info__time">2014-Nov - 2016-Jan</div>
+            <div className="section-info__time">
+              2015-Nov <br /> 2017-Jan
+            </div>
             <div className="section-info__desc">
               <div className="section-info__desc__title">
-                <h3 className="company">AccelAero</h3>
+                <h3 className="company">
+                  Information Systems Associates (Pvt) Ltd
+                </h3>
                 <h3 className="designation">User Interface Engineer</h3>
               </div>
               <div className="section-info__desc__content">
-                Built a ticket booking application with AngularJS and associated
-                technologies. Created Ionic mobile application and mobile sites.
+                <ul>
+                  <li>
+                    Re-built major components of the internet booking system
+                    with <strong>AngularJS</strong> and associated technologies
+                  </li>
+                  <li>
+                    Delivered an <strong>Ionic</strong> mobile application that
+                    has over 4.5/5 ratings on Play Store utilizing the same
+                    ticket booking code base
+                  </li>
+                  <li>
+                    Produced a mobile version with theming of the booking
+                    website in less than a month through effective code re-use
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
           <div className="section-info">
-            <div className="section-info__time">2014-July - 2015-Feb</div>
+            <div className="section-info__time">
+              2014-July <br /> 2015-Feb
+            </div>
             <div className="section-info__desc">
               <div className="section-info__desc__title">
                 <h3 className="company">Bank of Ceylon</h3>
                 <h3 className="designation">Software Engineering Intern</h3>
               </div>
               <div className="section-info__desc__content">
-                Worked on a Hybrid Mobile Application and an SMS mobile banking
-                application. PhoneGap was used for the Android Application and
-                the web services were done with Java and Jersey.
+                <ul>
+                  <li>
+                    Worked on a Hybrid Mobile Application and an SMS mobile
+                    banking application.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
           <div className="section-info">
-            <div className="section-info__time">2013-Nov - 2014-Mar</div>
+            <div className="section-info__time">
+              2013-Nov <br /> 2014-Mar
+            </div>
             <div className="section-info__desc">
               <div className="section-info__desc__title">
-                <h3 className="company">IFS</h3>
+                <h3 className="company">IFS R&D International (Pvt) Ltd</h3>
                 <h3 className="designation">Software Engineering Intern</h3>
               </div>
               <div className="section-info__desc__content">
-                Developed an applications for the Windows 8 Metro and Windows
-                Phone 8 platforms.
+                <ul>
+                  <li>
+                    Developed applications for the Windows 8 Metro and Windows
+                    Phone 8 platforms.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -155,7 +213,7 @@ const ResumePage = () => (
           <ul>
             <li>
               Created a GTFS-RT Validator as part of Google Summer of Code 2015
-              - Built a validator for General Transit Feed Real Time
+              - Built a validator for General Transit Feed Real-Time
               Specifications
             </li>
             <li>
@@ -177,6 +235,19 @@ const ResumePage = () => (
 
         <div class="section section-education">
           <h2 class="section__title">Education</h2>
+          <div class="section-info">
+            <div class="section-info__time">2011-2016</div>
+            <div class="section-info__desc">
+              <div class="section-info__desc__title">
+                <h3 class="company">University of Kelaniya</h3>
+                <h3 class="designation">BSc. In MIT(sp. In IT)</h3>
+              </div>
+              <div class="section-info__desc__content">
+                Completed BSc. In Management and Information Technology (Sp.
+                Information Technology) with a <strong>GPA of 3.85/4.0</strong>
+              </div>
+            </div>
+          </div>
           <div class="section-info">
             <div class="section-info__time">2011-2013</div>
             <div class="section-info__desc">

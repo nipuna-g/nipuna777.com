@@ -160,3 +160,94 @@
     margin-bottom: 16px;
   }
 }
+
+@media print {
+  * {
+    font-family: "Crimson Text";
+    font-size: 16px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Crimson Text";
+    margin-bottom: 0;
+    color: #186faf;
+  }
+
+  footer,
+  .header {
+    display: none;
+  }
+
+  .content.resume-container {
+    margin-top: -15px;
+  }
+
+  .resume-container .section ul.section__no-style-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .resume-container .section ul li {
+    line-height: 1;
+  }
+
+  .resume-container .section-info:last-child {
+    border-bottom: none;
+  }
+
+  .resume-container .section-info__time {
+    width: 6em;
+    margin: 0;
+  }
+
+  .section__title {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+  }
+
+  .resume-container .resume-header .information {
+    border-top: 4px solid #0a558c;
+  }
+
+  .resume-container .resume-header .information .header-title {
+    align-items: flex-end;
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+  }
+
+  .resume-container .resume-header .information .header-title h1 {
+    font-size: 32px;
+    margin-right: 4px;
+  }
+
+  .resume-container .resume-header .information .header-title h3 {
+    font-size: 24px;
+    padding-bottom: 8px;
+  }
+
+  .resume-container .resume-header .info-item {
+    font-size: 18px;
+    line-height: 1.2em;
+  }
+
+  .resume-container .resume-header .info-item strong {
+    line-height: 25px;
+  }
+
+  .resume-container .section-info__desc__title h3 {
+    font-size: 18px;
+  }
+
+  .resume-container .section__sub-title {
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+    font-size: 1em;
+  }
+}
