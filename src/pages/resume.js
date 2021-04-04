@@ -8,6 +8,12 @@ const ResumePage = () => (
   <Layout>
     <Seo title="Resume" />
     <FullWidthContent>
+      <button className="print-button" onClick={() => window.print()}>
+        Print{" "}
+        <span role="img" aria-label="printer">
+          🖨️
+        </span>
+      </button>
       <div className="content resume-container">
         <div className="resume-header">
           <div className="information">
@@ -75,7 +81,7 @@ const ResumePage = () => (
 
           <div className="section-info section-info--no-underline">
             <div className="section-info__time">
-              2021-February <br /> Present
+              2021-Feb <br /> Present
             </div>
             <div className="section-info__desc">
               <div className="section-info__desc__title">
@@ -87,7 +93,7 @@ const ResumePage = () => (
 
           <div className="section-info">
             <div className="section-info__time">
-              2019-April <br /> 2021-February
+              2019-Apr <br /> 2021-Feb
             </div>
             <div className="section-info__desc">
               <div className="section-info__desc__title">
@@ -116,7 +122,7 @@ const ResumePage = () => (
 
           <div className="section-info">
             <div className="section-info__time">
-              2017-Feb <br /> 2019-March
+              2017-Feb <br /> 2019-Mar
             </div>
             <div className="section-info__desc">
               <div className="section-info__desc__title">
@@ -165,12 +171,12 @@ const ResumePage = () => (
                   </li>
                   <li>
                     Delivered an <strong>Ionic</strong> mobile application that
-                    has over 4.5/5 ratings on Play Store utilizing the same
-                    ticket booking code base
+                    has over 4.5/5 ratings on Play Store utilizing the same code
+                    base
                   </li>
                   <li>
-                    Produced a mobile version with theming of the booking
-                    website in less than a month through effective code re-use
+                    Produced a mobile website with theming support in less than
+                    a month through effective code re-use
                   </li>
                 </ul>
               </div>
@@ -268,9 +274,8 @@ const ResumePage = () => (
                 <h3 class="designation">Professional Graduate Diploma</h3>
               </div>
               <div class="section-info__desc__content">
-                Passed British Computing Society (BCS) Higher Educational
-                Qualifications Professional Graduate Diploma(PGD) in IT with the
-                PGD level.
+                Completed British Computing Society (BCS) Higher Educational
+                Qualifications Professional Graduate Diploma(PGD).
               </div>
             </div>
           </div>
