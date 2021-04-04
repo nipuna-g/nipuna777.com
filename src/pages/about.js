@@ -1,14 +1,15 @@
 import React from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import PageTitle from "../components/page-title";
 import Img from "gatsby-image";
 import "./about.css";
+import { graphql } from "gatsby";
 
 const AboutPage = ({ data: { profile } }) => (
   <Layout>
-    <SEO title="About" />
+    <Seo title="About" />
     <FullWidthContent>
       <PageTitle title="About" />
     </FullWidthContent>

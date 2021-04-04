@@ -24,10 +24,10 @@ const Layout = ({ children }) => {
   `);
 
   const siteNavigation = [
-    { title: "Blog", link: "blog" },
-    { title: "Work", link: "work" },
-    { title: "Resume", link: "resume" },
-    { title: "About", link: "about" },
+    { title: "Blog", link: "/blog" },
+    { title: "Work", link: "/work" },
+    { title: "Resume", link: "/resume" },
+    { title: "About", link: "/about" },
   ];
 
   return (

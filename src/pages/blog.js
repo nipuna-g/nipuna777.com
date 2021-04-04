@@ -1,9 +1,10 @@
 import React from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import PageTitle from "../components/page-title";
 import PostLink from "../components/post-link";
+import { graphql } from "gatsby";
 
 const BlogPage = ({
   data: {
@@ -16,7 +17,7 @@ const BlogPage = ({
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <Seo title="Blog" />
       <FullWidthContent>
         <PageTitle title="Blog" />
       </FullWidthContent>

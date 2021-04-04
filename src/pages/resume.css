@@ -98,6 +98,11 @@
   margin-bottom: 0.5em;
 }
 
+.resume-container .section-info--no-underline {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
 .resume-container .section-info__time {
   display: flex;
   width: 12em;

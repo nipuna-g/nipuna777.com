@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import GithubIcon from "../images/icons/github.svg";
 import EnvelopeIcon from "../images/icons/envelope.svg";
@@ -9,6 +9,7 @@ import LinkedInIcon from "../images/icons/linkedin.svg";
 import StackOverflowIcon from "../images/icons/stackoverflow.svg";
 import Img from "gatsby-image";
 import "./index.css";
+import { graphql } from "gatsby";
 
 const IndexPage = ({
   data: {
@@ -17,7 +18,7 @@ const IndexPage = ({
   },
 }) => (
   <Layout>
-    <SEO title="Home" />
+    <Seo title="Home" />
     <FullWidthContent
       style={{
         background:

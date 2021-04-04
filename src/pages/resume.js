@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import "./resume.css";
 
 const ResumePage = () => (
   <Layout>
-    <SEO title="Resume" />
+    <Seo title="Resume" />
     <FullWidthContent>
       <div className="content resume-container">
         <div className="resume-header">
@@ -73,9 +73,21 @@ const ResumePage = () => (
         <div className="section section-work">
           <h2 className="section__title">Work Experience</h2>
 
+          <div className="section-info section-info--no-underline">
+            <div className="section-info__time">
+              2021-February <br /> Present
+            </div>
+            <div className="section-info__desc">
+              <div className="section-info__desc__title">
+                <h3 className="company">Beam Mobility Holdings Pte. Ltd</h3>
+                <h3 className="designation">Senior Frontend Engineer</h3>
+              </div>
+            </div>
+          </div>
+
           <div className="section-info">
             <div className="section-info__time">
-              2019-April <br /> Present
+              2019-April <br /> 2021-February
             </div>
             <div className="section-info__desc">
               <div className="section-info__desc__title">

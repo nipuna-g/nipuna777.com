@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import PageTitle from "../components/page-title";
 import Img from "gatsby-image";
 import "./work.css";
+import { graphql } from "gatsby";
 
 const WorkPage = ({
   data: {
@@ -19,7 +20,7 @@ const WorkPage = ({
 
   return (
     <Layout>
-      <SEO title="Work" />
+      <Seo title="Work" />
       <FullWidthContent>
         <PageTitle title="Work" />
       </FullWidthContent>

@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import PageTitle from "../components/page-title";
 
@@ -12,7 +12,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
+      <Seo title={frontmatter.title} />
       <FullWidthContent>
         <PageTitle title={frontmatter.title} />
         <span style={{ display: "block", fontSize: 14 }}>
