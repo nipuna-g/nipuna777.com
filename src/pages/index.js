@@ -117,7 +117,7 @@ const ProjectPreview = ({ index, post, title, excerpt }) => (
 );
 
 const BlogPostPreview = ({ title, excerpt, path }) => (
-  <Link className="blog-post-preview">
+  <Link className="blog-post-preview" to={path}>
     <h3>{title}</h3>
     <p className="blog-post-preview__excerpt">{excerpt}</p>
   </Link>
