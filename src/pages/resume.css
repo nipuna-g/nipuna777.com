@@ -37,6 +37,8 @@
 .resume-container .resume-header .information .header-items {
   width: 50%;
   float: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .resume-container .resume-header .information .header-title h1 {
@@ -59,7 +61,8 @@
 .resume-container .resume-header .info-item strong {
   display: block;
   float: left;
-  min-width: 82px;
+  min-width: 50px;
+  padding-right: 20px;
 }
 
 .resume-container .section p {
@@ -105,7 +108,7 @@
 
 .resume-container .section-info__time {
   display: flex;
-  width: 12em;
+  width: 6em;
   margin: 0.5em 0;
   font-weight: bold;
 }
@@ -211,8 +214,13 @@
     margin: 0;
     padding: 0;
   }
+  .resume-container .section ul.section__no-style-list li {
+    margin-bottom: 0.5em;
+  }
+
   .resume-container .section ul li {
-    line-height: 1;
+    line-height: 1em;
+    margin-bottom: 0.5em;
   }
 
   .resume-container .section-info:last-child {
@@ -248,16 +256,19 @@
 
   .resume-container .resume-header .information .header-title h3 {
     font-size: 24px;
-    padding-bottom: 8px;
   }
 
   .resume-container .resume-header .info-item {
-    font-size: 18px;
-    line-height: 1.2em;
+    font-size: 16px;
+    line-height: 1.4em;
   }
 
   .resume-container .resume-header .info-item strong {
-    line-height: 25px;
+    font-size: 16px;
+  }
+
+  .resume-container .resume-header .info-item a {
+    font-size: 16px;
   }
 
   .resume-container .section-info__desc__title h3 {

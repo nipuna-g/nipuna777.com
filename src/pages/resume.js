@@ -23,7 +23,7 @@ const ResumePage = () => (
             </div>
             <div className="header-items">
               <div className="info-item">
-                <strong>Phone:</strong> +85150354
+                <strong>Phone:</strong> +6585150354
               </div>
               <div className="info-item">
                 <strong>Email:</strong> nipuna777@gmail.com
@@ -41,39 +41,8 @@ const ResumePage = () => (
                   linkedin.com/in/nipuna777
                 </a>
               </div>
-              <div className="info-item">
-                <strong> GitHub:</strong>
-                <a href="https://github.com/nipuna777">github.com/nipuna777</a>
-              </div>
             </div>
           </div>
-        </div>
-
-        <div className="section">
-          <h2 className="section__title">Skills</h2>
-
-          <ul className="section__no-style-list">
-            <li>
-              Frontend Development:
-              <strong>
-                HTML/CSS/SASS, Angular, ReactJS, React Native, Flutter
-              </strong>
-            </li>
-            <li>
-              Programming Languages:
-              <strong>JavaScript, TypeScript, Dart</strong>
-            </li>
-            <li>
-              Testing: <strong>Karma, Jasmine, Selenium, Cypress, Detox</strong>
-            </li>
-            <li>
-              Backend Development: <strong>Firebase, NodeJS</strong>
-            </li>
-            <li>
-              Other Tools & Technologies:{" "}
-              <strong>Git/Github, Figma, Gatsby, AWS, MapboxGL</strong>
-            </li>
-          </ul>
         </div>
 
         <div className="section section-work">
@@ -85,7 +54,7 @@ const ResumePage = () => (
             </div>
             <div className="section-info__desc">
               <div className="section-info__desc__title">
-                <h3 className="company">Beam Mobility Holdings Pte. Ltd</h3>
+                <h3 className="company">Beam Mobility</h3>
                 <h3 className="designation">Senior Frontend Engineer</h3>
               </div>
             </div>
@@ -97,7 +66,7 @@ const ResumePage = () => (
             </div>
             <div className="section-info__desc">
               <div className="section-info__desc__title">
-                <h3 className="company">Beam Mobility Holdings Pte. Ltd</h3>
+                <h3 className="company">Beam Mobility</h3>
                 <h3 className="designation">Frontend Engineer</h3>
               </div>
               <div className="section-info__desc__content">
@@ -224,33 +193,6 @@ const ResumePage = () => (
           </div>
         </div>
 
-        <div class="section section-achivements">
-          <h2 class="section__title">Achievements</h2>
-
-          <h3 class="section__sub-title">Projects</h3>
-          <ul>
-            <li>
-              Created a GTFS-RT Validator as part of Google Summer of Code 2015
-              - Built a validator for General Transit Feed Real-Time
-              Specifications
-            </li>
-            <li>
-              Developed Train Tracking application as part of 3rd Year Project
-            </li>
-            <li>
-              Developed a Customer Information System as the PGD project for BCS
-              using the C# Language and the .Net framework
-            </li>
-          </ul>
-
-          <h3 class="section__sub-title">Competitions</h3>
-          <ul>
-            <li>Second runners-up of TadHack 2017</li>
-            <li>Winners of HackaDev 2015</li>
-            <li>LAN Hack 2015 Top 5 Teams</li>
-          </ul>
-        </div>
-
         <div class="section section-education">
           <h2 class="section__title">Education</h2>
           <div class="section-info">
@@ -280,7 +222,7 @@ const ResumePage = () => (
             </div>
           </div>
 
-          <div class="section-info">
+          {/* <div class="section-info">
             <div class="section-info__time">2001-2010</div>
             <div class="section-info__desc">
               <div class="section-info__desc__title">
@@ -288,7 +230,63 @@ const ResumePage = () => (
                 <h3 class="designation">A/L, O/L</h3>
               </div>
             </div>
-          </div>
+          </div> */}
+        </div>
+
+        <div className="section">
+          <h2 className="section__title">Languages and Technologies</h2>
+
+          <ul className="section__no-style-list">
+            <li>
+              Frontend Development:
+              <strong>HTML/CSS/SASS, ReactJS, React Native, Angular</strong>
+            </li>
+            <li>
+              Programming Languages:
+              <strong>JavaScript, TypeScript, Java</strong>
+            </li>
+            <li>
+              Testing:{" "}
+              <strong>
+                Jest, Selenium, Cypress, Detox, React testing library
+              </strong>
+            </li>
+            <li>
+              Backend Development: <strong>Firebase, NodeJS/ Express.js</strong>
+            </li>
+            <li>
+              Other Tools & Technologies:{" "}
+              <strong>Git/Github, Figma, Gatsby, AWS, MapboxGL, CI/CD</strong>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section section-achivements">
+          <h2 class="section__title">Achievements</h2>
+
+          <h3 class="section__sub-title">Projects</h3>
+          <ul>
+            <li>
+              Created a GTFS-RT Validator as part of Google Summer of Code 2015
+              - Built a validator for General Transit Feed Real-Time
+              Specifications
+            </li>
+            <li>
+              Developed Train Tracking application as part of 3rd Year Project
+            </li>
+            <li>
+              Developed a Customer Information System as the PGD project for BCS
+              using the C# Language and the .Net framework
+            </li>
+          </ul>
+
+          <h3 class="section__sub-title">Competitions</h3>
+          <ul>
+            <li>
+              Participated hackathons: Second runners-up of TadHack 2017,
+              Winners of HackaDev 2015, LAN Hack 2015 Top 5 Teams
+            </li>
+          </ul>
         </div>
       </div>
     </FullWidthContent>
