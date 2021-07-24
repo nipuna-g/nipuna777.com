@@ -39,6 +39,7 @@
   float: left;
   display: flex;
   flex-direction: column;
+  margin-bottom: 0.3em;
 }
 
 .resume-container .resume-header .information .header-title h1 {
@@ -54,23 +55,8 @@
   padding: 0;
 }
 
-.resume-container .resume-header .info-item {
-  margin-bottom: 0.25em;
-}
-
-.resume-container .resume-header .info-item strong {
-  display: block;
-  float: left;
-  min-width: 50px;
-  padding-right: 20px;
-}
-
 .resume-container .section p {
   margin-bottom: 0.75em;
-}
-
-.resume-container .section__sub-title {
-  margin-bottom: 0.5em;
 }
 
 .resume-container .section ul {
@@ -85,13 +71,6 @@
 
 .resume-container .section ul li ul {
   list-style: circle;
-}
-
-.resume-container h3 {
-  color: black;
-  background: none;
-  margin: 0;
-  padding: 0;
 }
 
 .resume-container .section-info {
@@ -179,109 +158,10 @@
   }
 }
 
-@media print {
-  * {
-    font-family: "Crimson Text";
-    font-size: 14px;
-  }
-
-  .header,
-  .print-button {
-    display: none;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Crimson Text";
-    margin-bottom: 0;
-    color: #186faf;
-  }
-
-  footer,
-  .content.resume-container {
-    margin-top: -15px;
-  }
-
-  .resume-container .section ul.section__no-style-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .resume-container .section ul.section__no-style-list li {
-    margin-bottom: 0.5em;
-  }
-
-  .resume-container .section ul li {
-    line-height: 1em;
-    margin-bottom: 0.5em;
-  }
-
-  .resume-container .section-info:last-child {
-    border-bottom: none;
-  }
-
-  .resume-container .section-info__time {
-    width: 6em;
-    margin: 0;
-  }
-
-  .section__title {
-    font-size: 22px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid;
-  }
-
-  .resume-container .resume-header .information {
-    border-top: 4px solid #0a558c;
-  }
-
-  .resume-container .resume-header .information .header-title {
-    align-items: flex-end;
-    margin-top: 1.2em;
-    margin-bottom: 0.8em;
-  }
-
-  .resume-container .resume-header .information .header-title h1 {
-    font-size: 32px;
-    margin-right: 4px;
-  }
-
-  .resume-container .resume-header .information .header-title h3 {
-    font-size: 24px;
-  }
-
-  .resume-container .resume-header .info-item {
-    font-size: 16px;
-    line-height: 1.4em;
-  }
-
-  .resume-container .resume-header .info-item strong {
-    font-size: 16px;
-  }
-
-  .resume-container .resume-header .info-item a {
-    font-size: 16px;
-  }
-
-  .resume-container .section-info__desc__title h3 {
-    font-size: 18px;
-  }
-
-  .resume-container .section__sub-title {
-    margin-bottom: 0.5em;
-    margin-top: 1em;
-    font-size: 1em;
-  }
-}
-
 $mediumGray: #888;
 $black: #234;
 $primary: #186faf;
+$primaryDark: #003e6b;
 
 .section-header {
   font-size: 1.5em;
@@ -289,20 +169,29 @@ $primary: #186faf;
   margin: 0;
 
   border-top: 2px solid $black;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 
 .sub-section {
   display: flex;
   flex-direction: column;
   border-bottom: 2px dotted $mediumGray;
-  padding-bottom: 1em;
-  margin-bottom: 0.5em;
+  padding-bottom: 0;
 
   &--last-item {
     border-bottom: none;
     padding-bottom: 0;
     margin-bottom: 0;
+  }
+
+  &--empty-item {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    .sub-section-title {
+      margin-bottom: -0.5em;
+    }
   }
 }
 
@@ -313,6 +202,7 @@ $primary: #186faf;
   font-size: 1.1em;
 
   .duration {
+    color: $primary;
     font-weight: bold;
     flex: 1;
   }
@@ -329,5 +219,64 @@ $primary: #186faf;
     font-weight: bold;
     flex: 1;
     text-align: right;
+  }
+}
+
+.section__sub-title {
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
+}
+
+@media print {
+  .header,
+  footer,
+  .print-button {
+    display: none;
+  }
+
+  * {
+    font-family: "Crimson Text";
+    font-size: 0.9rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Crimson Text";
+    margin-bottom: 0;
+    color: $primaryDark;
+  }
+
+  .resume-container .resume-header .information .header-title {
+    margin: 0;
+    margin-bottom: 0.5em;
+
+    h1 {
+      font-size: 2em;
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+
+  .section-header {
+    margin: 0;
+    padding: 0;
+    padding: 0.4em 0 0.2em;
+  }
+
+  .info-item {
+    strong {
+      display: inline-block;
+      min-width: 10ch;
+    }
+    &--left {
+      strong {
+        min-width: 7ch;
+      }
+    }
   }
 }
