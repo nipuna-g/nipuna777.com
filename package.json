@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Nipuna Gunathilake <nipuna777@gmail.com>",
   "dependencies": {
-    "gatsby": "^3.2.0",
+    "gatsby": "^3.10.0",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-google-analytics": "^2.3.0",
     "gatsby-plugin-manifest": "^2.3.3",
@@ -17,12 +17,15 @@
     "gatsby-transformer-remark": "^2.8.3",
     "gatsby-transformer-sharp": "^2.4.3",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^5.2.1",
+    "react-markdown": "^6.0.2"
   },
   "devDependencies": {
     "babel-preset-gatsby": "^1.2.0",
+    "gatsby-plugin-sass": "^4.10.0",
+    "node-sass": "^6.0.1",
     "prettier": "^1.19.1"
   },
   "keywords": [

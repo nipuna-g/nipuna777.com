@@ -2,7 +2,77 @@ import React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
-import "./resume.css";
+import "./resume.scss";
+import ReactMarkdown from "react-markdown";
+
+const occupations = [
+  {
+    startDate: new Date(2021, 1),
+    designation: "Senior Frontend Engineer",
+    organization: "Beam Mobility",
+  },
+  {
+    startDate: new Date(2019, 3),
+    endDate: new Date(2021, 1),
+    designation: "Frontend Engineer",
+    organization: "Beam Mobility",
+    details: `- Completed UI overhaul of the **React Native** application by using re-usable styled-components.
+- Integrated **MapboxGL** maps to allow for customizable
+    interactive maps to match designs
+- Added **TypeScript** support and end to end tests using
+    **Detox** helping cut down on testing time`,
+  },
+  {
+    startDate: new Date(2017, 1),
+    endDate: new Date(2019, 2),
+    designation: "Software Engineer",
+    organization: "IFS R&D International (Pvt) Ltd",
+    details: `- Developed a complex **Angular** client for a planning and scheduling optimization application
+- Created and maintained a complete suite of automated tests using **Selenium**
+- Implemented lazy loaded modules for the single page application making it load 20% faster
+- Assisted the onboarding process of new engineers into the team`,
+  },
+  {
+    startDate: new Date(2015, 10),
+    endDate: new Date(2017, 0),
+    designation: "User Interface Engineer",
+    organization: "AccelAero",
+    details: `- Re-built major components of the internet booking system with **AngularJS** and associated technologies
+- Delivered an **Ionic** mobile application that has over 4.5/5 ratings on Play Store utilizing the same code base
+- Produced a mobile website with theming support in less than a month through effective code re-use`,
+  },
+  {
+    startDate: new Date(2014, 6),
+    endDate: new Date(2015, 1),
+    designation: "Software Engineering Intern",
+    organization: "Bank of Ceylon",
+    details: `Worked on a Hybrid Mobile Application and an SMS mobile banking application.`,
+  },
+  {
+    startDate: new Date(2013, 10),
+    endDate: new Date(2014, 2),
+    designation: "Software Engineering Intern",
+    organization: "IFS R&D International (Pvt) Ltd",
+    details: `Developed applications for the Windows 8 Metro and Windows Phone 8 platforms`,
+  },
+];
+
+const qualifications = [
+  {
+    startDate: new Date().setFullYear(2011),
+    endDate: new Date().setFullYear(2016),
+    designation: "BSc. In MIT(sp. In IT)",
+    organization: "University of Kelaniya",
+    details: `Completed BSc. In Management and Information Technology (Sp. Information Technology) with a GPA of **3.85/4.0**`,
+  },
+  {
+    startDate: new Date().setFullYear(2011),
+    endDate: new Date().setFullYear(2013),
+    designation: "Professional Graduate Diploma",
+    organization: "BCS Qualifications",
+    details: `Completed British Computing Society (BCS) Higher Educational Qualifications Professional Graduate Diploma(PGD).`,
+  },
+];
 
 const ResumePage = () => (
   <Layout>
@@ -46,195 +116,31 @@ const ResumePage = () => (
         </div>
 
         <div className="section section-work">
-          <h2 className="section__title">Work Experience</h2>
+          <SectionHeader title="Work Experience" />
 
-          <div className="section-info section-info--no-underline">
-            <div className="section-info__time">
-              2021-Feb <br /> Present
-            </div>
-            <div className="section-info__desc">
-              <div className="section-info__desc__title">
-                <h3 className="company">Beam Mobility</h3>
-                <h3 className="designation">Senior Frontend Engineer</h3>
-              </div>
-            </div>
-          </div>
-
-          <div className="section-info">
-            <div className="section-info__time">
-              2019-Apr <br /> 2021-Feb
-            </div>
-            <div className="section-info__desc">
-              <div className="section-info__desc__title">
-                <h3 className="company">Beam Mobility</h3>
-                <h3 className="designation">Frontend Engineer</h3>
-              </div>
-              <div className="section-info__desc__content">
-                <ul>
-                  <li>
-                    Completed UI overhaul of the <strong>React Native</strong>{" "}
-                    application by using re-usable styled-components.
-                  </li>
-                  <li>
-                    Integrated <strong>MapboxGL</strong> maps to allow for
-                    customizable interactive maps to match designs
-                  </li>
-                  <li>
-                    Added <strong>TypeScript</strong> support and end to end
-                    tests using <strong>Detox</strong> helping cut down on
-                    testing time
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="section-info">
-            <div className="section-info__time">
-              2017-Feb <br /> 2019-Mar
-            </div>
-            <div className="section-info__desc">
-              <div className="section-info__desc__title">
-                <h3 className="company">IFS R&D International (Pvt) Ltd</h3>
-                <h3 className="designation">Software Engineer</h3>
-              </div>
-              <div className="section-info__desc__content">
-                <ul>
-                  <li>
-                    Developed a complex <strong>Angular</strong> client for a
-                    planning and scheduling optimization application
-                  </li>
-                  <li>
-                    Created and maintained a complete suite of automated tests
-                    using <strong>Selenium</strong>
-                  </li>
-                  <li>
-                    Implemented lazy loaded modules for the single page
-                    application making it load 20% faster
-                  </li>
-                  <li>
-                    Assisted the onboarding process of new engineers into the
-                    team
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="section-info">
-            <div className="section-info__time">
-              2015-Nov <br /> 2017-Jan
-            </div>
-            <div className="section-info__desc">
-              <div className="section-info__desc__title">
-                <h3 className="company">
-                  Information Systems Associates (Pvt) Ltd
-                </h3>
-                <h3 className="designation">User Interface Engineer</h3>
-              </div>
-              <div className="section-info__desc__content">
-                <ul>
-                  <li>
-                    Re-built major components of the internet booking system
-                    with <strong>AngularJS</strong> and associated technologies
-                  </li>
-                  <li>
-                    Delivered an <strong>Ionic</strong> mobile application that
-                    has over 4.5/5 ratings on Play Store utilizing the same code
-                    base
-                  </li>
-                  <li>
-                    Produced a mobile website with theming support in less than
-                    a month through effective code re-use
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="section-info">
-            <div className="section-info__time">
-              2014-July <br /> 2015-Feb
-            </div>
-            <div className="section-info__desc">
-              <div className="section-info__desc__title">
-                <h3 className="company">Bank of Ceylon</h3>
-                <h3 className="designation">Software Engineering Intern</h3>
-              </div>
-              <div className="section-info__desc__content">
-                <ul>
-                  <li>
-                    Worked on a Hybrid Mobile Application and an SMS mobile
-                    banking application.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="section-info">
-            <div className="section-info__time">
-              2013-Nov <br /> 2014-Mar
-            </div>
-            <div className="section-info__desc">
-              <div className="section-info__desc__title">
-                <h3 className="company">IFS R&D International (Pvt) Ltd</h3>
-                <h3 className="designation">Software Engineering Intern</h3>
-              </div>
-              <div className="section-info__desc__content">
-                <ul>
-                  <li>
-                    Developed applications for the Windows 8 Metro and Windows
-                    Phone 8 platforms.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          {occupations.map((occupation, i) => (
+            <OccupationSection
+              occupation={occupation}
+              isLastItem={i === occupations.length - 1}
+              key={`${occupation.organization}-${occupation.designation}`}
+            />
+          ))}
         </div>
 
-        <div class="section section-education">
-          <h2 class="section__title">Education</h2>
-          <div class="section-info">
-            <div class="section-info__time">2011-2016</div>
-            <div class="section-info__desc">
-              <div class="section-info__desc__title">
-                <h3 class="company">University of Kelaniya</h3>
-                <h3 class="designation">BSc. In MIT(sp. In IT)</h3>
-              </div>
-              <div class="section-info__desc__content">
-                Completed BSc. In Management and Information Technology (Sp.
-                Information Technology) with a <strong>GPA of 3.85/4.0</strong>
-              </div>
-            </div>
-          </div>
-          <div class="section-info">
-            <div class="section-info__time">2011-2013</div>
-            <div class="section-info__desc">
-              <div class="section-info__desc__title">
-                <h3 class="company">BCS Qualifications</h3>
-                <h3 class="designation">Professional Graduate Diploma</h3>
-              </div>
-              <div class="section-info__desc__content">
-                Completed British Computing Society (BCS) Higher Educational
-                Qualifications Professional Graduate Diploma(PGD).
-              </div>
-            </div>
-          </div>
+        <div className="section section-education">
+          <SectionHeader title="Education" />
 
-          {/* <div class="section-info">
-            <div class="section-info__time">2001-2010</div>
-            <div class="section-info__desc">
-              <div class="section-info__desc__title">
-                <h3 class="company">Royal College, Colombo</h3>
-                <h3 class="designation">A/L, O/L</h3>
-              </div>
-            </div>
-          </div> */}
+          {qualifications.map((qualification, i) => (
+            <EducationSection
+              qualification={qualification}
+              isLastItem={i === qualifications.length - 1}
+              key={`${qualification.organization}-${qualification.designation}`}
+            />
+          ))}
         </div>
 
         <div className="section">
-          <h2 className="section__title">Languages and Technologies</h2>
+          <SectionHeader title="Languages and Technologies" />
 
           <ul className="section__no-style-list">
             <li>
@@ -261,10 +167,10 @@ const ResumePage = () => (
           </ul>
         </div>
 
-        <div class="section section-achivements">
-          <h2 class="section__title">Achievements</h2>
+        <div className="section section-achivements">
+          <SectionHeader title="Achievements" />
 
-          <h3 class="section__sub-title">Projects</h3>
+          <h3 className="section__sub-title">Projects</h3>
           <ul>
             <li>
               Created a GTFS-RT Validator as part of Google Summer of Code 2015
@@ -280,7 +186,7 @@ const ResumePage = () => (
             </li>
           </ul>
 
-          <h3 class="section__sub-title">Competitions</h3>
+          <h3 className="section__sub-title">Competitions</h3>
           <ul>
             <li>
               Participated hackathons: Second runners-up of TadHack 2017,
@@ -292,4 +198,51 @@ const ResumePage = () => (
     </FullWidthContent>
   </Layout>
 );
+
+const SectionHeader = ({ title }) => (
+  <h2 className={`section-header`}>{title}</h2>
+);
+
+const SubSectionTitle = ({
+  startDate,
+  endDate,
+  designation,
+  organization,
+  hideMonth,
+}) => {
+  const format = !hideMonth
+    ? {
+        year: "numeric",
+        month: "short",
+      }
+    : {
+        year: "numeric",
+      };
+  const dateFormatter = Intl.DateTimeFormat("en-GB", format);
+  return (
+    <div className="sub-section-title">
+      <span className="duration">
+        {dateFormatter.format(startDate)} -{" "}
+        {endDate ? dateFormatter.format(endDate) : "Present"}
+      </span>
+      <span className="company">{organization}</span>
+      <span className="designation">{designation}</span>
+    </div>
+  );
+};
+
+const OccupationSection = ({ occupation, isLastItem }) => (
+  <div className={`sub-section ${isLastItem ? "sub-section--last-item" : ""}`}>
+    <SubSectionTitle {...occupation} />
+    <ReactMarkdown>{occupation.details}</ReactMarkdown>
+  </div>
+);
+
+const EducationSection = ({ qualification, isLastItem }) => (
+  <div className={`sub-section ${isLastItem ? "sub-section--last-item" : ""}`}>
+    <SubSectionTitle {...qualification} hideMonth={true} />
+    <ReactMarkdown>{qualification.details}</ReactMarkdown>
+  </div>
+);
+
 export default ResumePage;
