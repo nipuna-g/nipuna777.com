@@ -41,13 +41,13 @@ const occupations = [
 - Delivered an **Ionic** mobile application that has over 4.5/5 ratings on Play Store utilizing the same code base
 - Produced a mobile website with theming support in less than a month through effective code re-use`,
   },
-  {
-    startDate: new Date(2014, 6),
-    endDate: new Date(2015, 1),
-    designation: "Software Engineering Intern",
-    organization: "Bank of Ceylon",
-    details: `Worked on a Hybrid Mobile Application and an SMS mobile banking application.`,
-  },
+  // {
+  //   startDate: new Date(2014, 6),
+  //   endDate: new Date(2015, 1),
+  //   designation: "Software Engineering Intern",
+  //   organization: "Bank of Ceylon",
+  //   details: `Worked on a Hybrid Mobile Application and an SMS mobile banking application.`,
+  // },
   {
     startDate: new Date(2013, 10),
     endDate: new Date(2014, 2),
@@ -59,15 +59,15 @@ const occupations = [
 
 const qualifications = [
   {
-    startDate: new Date().setFullYear(2011),
-    endDate: new Date().setFullYear(2016),
+    startDate: new Date(2011, 0),
+    endDate: new Date(2016, 0),
     designation: "BSc. In MIT(sp. In IT)",
     organization: "University of Kelaniya",
     details: `Completed BSc. In Management and Information Technology (Sp. Information Technology) with a GPA of **3.85/4.0**`,
   },
   {
-    startDate: new Date().setFullYear(2011),
-    endDate: new Date().setFullYear(2013),
+    startDate: new Date(2011, 0),
+    endDate: new Date(2013, 0),
     designation: "Professional Graduate Diploma",
     organization: "BCS Qualifications",
     details: `Completed British Computing Society (BCS) Higher Educational Qualifications Professional Graduate Diploma(PGD).`,
@@ -92,11 +92,11 @@ const ResumePage = () => (
               <h3>&nbsp;Software Engineer</h3>
             </div>
             <div className="header-items">
-              <div className="info-item">
+              <div className="info-item info-item--left">
                 <strong>Phone:</strong> +6585150354
               </div>
-              <div className="info-item">
-                <strong>Email:</strong> nipuna777@gmail.com
+              <div className="info-item info-item--left">
+                <strong>Email: </strong> nipuna777@gmail.com
               </div>
             </div>
 
@@ -145,16 +145,9 @@ const ResumePage = () => (
           <ul className="section__no-style-list">
             <li>
               Frontend Development:
-              <strong>HTML/CSS/SASS, ReactJS, React Native, Angular</strong>
-            </li>
-            <li>
-              Programming Languages:
-              <strong>JavaScript, TypeScript, Java</strong>
-            </li>
-            <li>
-              Testing:{" "}
               <strong>
-                Jest, Selenium, Cypress, Detox, React testing library
+                HTML/CSS/SASS, JavaScript, TypeScript, ReactJS, React Native,
+                Angular
               </strong>
             </li>
             <li>
@@ -162,7 +155,10 @@ const ResumePage = () => (
             </li>
             <li>
               Other Tools & Technologies:{" "}
-              <strong>Git/Github, Figma, Gatsby, AWS, MapboxGL, CI/CD</strong>
+              <strong>
+                Git/Github, Figma, Gatsby, AWS, MapboxGL, CI/CD, Cypress,
+                Selenium, Jest
+              </strong>
             </li>
           </ul>
         </div>
@@ -180,10 +176,10 @@ const ResumePage = () => (
             <li>
               Developed Train Tracking application as part of 3rd Year Project
             </li>
-            <li>
+            {/* <li>
               Developed a Customer Information System as the PGD project for BCS
               using the C# Language and the .Net framework
-            </li>
+            </li> */}
           </ul>
 
           <h3 className="section__sub-title">Competitions</h3>
@@ -232,7 +228,11 @@ const SubSectionTitle = ({
 };
 
 const OccupationSection = ({ occupation, isLastItem }) => (
-  <div className={`sub-section ${isLastItem ? "sub-section--last-item" : ""}`}>
+  <div
+    className={`sub-section ${isLastItem ? "sub-section--last-item" : ""} ${
+      !occupation.details ? "sub-section--empty-item" : ""
+    }`}
+  >
     <SubSectionTitle {...occupation} />
     <ReactMarkdown>{occupation.details}</ReactMarkdown>
   </div>
