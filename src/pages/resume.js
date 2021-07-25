@@ -7,17 +7,17 @@ import ReactMarkdown from "react-markdown";
 
 const occupations = [
   {
-    startDate: new Date(2021, 1),
+    startDate: new Date(2019, 3),
     designation: "Senior Frontend Engineer",
-    organization: "Beam Mobility",
+    organization: "Beam Mobility (SG)",
   },
   {
-    startDate: new Date(2019, 3),
-    endDate: new Date(2021, 1),
+    startDate: null,
+    endDate: null,
     designation: "Frontend Engineer",
-    organization: "Beam Mobility",
-    details: `- Led the development of the subscription feature from the RFC phase to completion. Collaborated with designers and developers to ship the feature that brings in ~10% of daily revenue.
-- Created a library of re-usable using **styled-components** cutting down development time and reducing rework by up-to 50%. Utilized this library to overhaul the look and feel of the UI successfully in two weeks.
+    details: `Beam is APAC's leading micromobility firm. Headquartered in Singapore, Beam operates over 30,000 vehicles across Australia, New Zealand, South Korea, and Malaysia. 
+- Led the development of the subscription feature bringing in ~10% of daily revenue. Collaborated with product managers, designers and developers to drive the project from RFC stage to completion.
+- Created a library of re-usable components using **styled-components** cutting down UI development time and reducing rework by up-to 50%. Utilized this library to overhaul the look and feel of the UI successfully in two weeks.
 - Introduced new technologies to the frontend stack including **TypeScript, MapboxGL, React hooks, React Testing Library** 
 to the organization improving developer efficiency and happiness`,
   },
@@ -25,7 +25,7 @@ to the organization improving developer efficiency and happiness`,
     startDate: new Date(2017, 1),
     endDate: new Date(2019, 2),
     designation: "Software Engineer",
-    organization: "IFS R&D International (Pvt) Ltd",
+    organization: "IFS R&D International (LK)",
     details: `- Developed a complex **Angular** client for a planning and scheduling optimization application
 - Created and maintained a complete suite of automated tests using **Selenium**
 - Implemented lazy loaded modules for the single page application making it load 20% faster
@@ -35,7 +35,7 @@ to the organization improving developer efficiency and happiness`,
     startDate: new Date(2015, 10),
     endDate: new Date(2017, 0),
     designation: "User Interface Engineer",
-    organization: "AccelAero",
+    organization: "AccelAero (LK)",
     details: `- Re-built major components of the internet booking system with **AngularJS** and associated technologies
 - Delivered an **Ionic** mobile application that has over 4.5/5 ratings on Play Store utilizing the same code base
 - Produced a mobile website with theming support in less than a month through effective code re-use`,
@@ -50,8 +50,8 @@ to the organization improving developer efficiency and happiness`,
   {
     startDate: new Date(2013, 10),
     endDate: new Date(2014, 2),
-    designation: "Software Engineering Intern",
-    organization: "IFS R&D International (Pvt) Ltd",
+    designation: "Software Engineering Intern ",
+    organization: "IFS R&D International (LK)",
     details: `Developed applications for the Windows 8 Metro and Windows Phone 8 platforms`,
   },
 ];
@@ -75,7 +75,7 @@ const qualifications = [
 
 const ResumePage = () => (
   <Layout>
-    <Seo title="Résumé" />
+    <Seo title="Resume" />
     <FullWidthContent>
       <button className="print-button" onClick={() => window.print()}>
         Print{" "}
@@ -87,8 +87,7 @@ const ResumePage = () => (
         <div className="resume-header">
           <div className="information">
             <div className="header-title">
-              <h1>Nipuna Gunathilake</h1>
-              <h3>&nbsp;Software Engineer</h3>
+              <h2>Nipuna Gunathilake</h2>
             </div>
             <div className="header-items">
               <div className="info-item info-item--left">
@@ -214,12 +213,16 @@ const SubSectionTitle = ({
         year: "numeric",
       };
   const dateFormatter = Intl.DateTimeFormat("en-GB", format);
+  const hideDates = !startDate && !endDate;
+
   return (
     <div className="sub-section-title">
-      <span className="duration">
-        {dateFormatter.format(startDate)} -{" "}
-        {endDate ? dateFormatter.format(endDate) : "Present"}
-      </span>
+      {hideDates ? null : (
+        <span className="duration">
+          {dateFormatter.format(startDate)} -{" "}
+          {endDate ? dateFormatter.format(endDate) : "Present"}
+        </span>
+      )}
       <span className="company">{organization}</span>
       <span className="designation">{designation}</span>
     </div>
