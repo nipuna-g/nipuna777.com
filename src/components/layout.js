@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          homeTitle
         }
       }
     }
@@ -35,7 +36,7 @@ const Layout = ({ children }) => {
       style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
     >
       <Header
-        siteTitle={data.site.siteMetadata.title}
+        siteTitle={data.site.siteMetadata.homeTitle}
         siteNavigation={siteNavigation}
       />
       <div

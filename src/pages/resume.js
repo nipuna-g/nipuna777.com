@@ -16,11 +16,10 @@ const occupations = [
     endDate: new Date(2021, 1),
     designation: "Frontend Engineer",
     organization: "Beam Mobility",
-    details: `- Completed UI overhaul of the **React Native** application by using re-usable styled-components.
-- Integrated **MapboxGL** maps to allow for customizable
-    interactive maps to match designs
-- Added **TypeScript** support and end to end tests using
-    **Detox** helping cut down on testing time`,
+    details: `- Led the development of the subscription feature from the RFC phase to completion. Collaborated with designers and developers to ship the feature that brings in ~10% of daily revenue.
+- Created a library of re-usable using **styled-components** cutting down development time and reducing rework by up-to 50%. Utilized this library to overhaul the look and feel of the UI successfully in two weeks.
+- Introduced new technologies to the frontend stack including **TypeScript, MapboxGL, React hooks, React Testing Library** 
+to the organization improving developer efficiency and happiness`,
   },
   {
     startDate: new Date(2017, 1),
@@ -76,7 +75,7 @@ const qualifications = [
 
 const ResumePage = () => (
   <Layout>
-    <Seo title="Resume" />
+    <Seo title="Résumé" />
     <FullWidthContent>
       <button className="print-button" onClick={() => window.print()}>
         Print{" "}
@@ -185,7 +184,7 @@ const ResumePage = () => (
           <h3 className="section__sub-title">Competitions</h3>
           <ul>
             <li>
-              Participated hackathons: Second runners-up of TadHack 2017,
+              Participated in hackathons: Second runners-up of TadHack 2017,
               Winners of HackaDev 2015, LAN Hack 2015 Top 5 Teams
             </li>
           </ul>

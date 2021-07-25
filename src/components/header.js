@@ -17,7 +17,7 @@ const Header = ({ siteTitle, siteNavigation }) => (
       </h1>
       <ul className="header__menu">
         {siteNavigation.map(navItem => (
-          <li className="header__menu__item">
+          <li className="header__menu__item" key={navItem.link}>
             <Link
               className="header__menu__item__link"
               activeClassName="header__menu__item__link--active"

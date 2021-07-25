@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `~/nipuna`,
+    title: "Nipuna Gunathilake",
+    homeTitle: `~/nipuna`,
     description: `Nipuna Gunathilake's corner of the world wide web.`,
     author: `Nipuna Gunathilake`,
   },
