@@ -25,6 +25,7 @@ const Layout = ({ children }) => {
   `);
 
   const siteNavigation = [
+    { title: "Home", link: "/" },
     { title: "Blog", link: "/blog" },
     { title: "Work", link: "/work" },
     { title: "Resume", link: "/resume" },

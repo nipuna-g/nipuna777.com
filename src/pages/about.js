@@ -78,7 +78,7 @@ export default AboutPage;
 
 export const pageQuery = graphql`
   query {
-    profile: file(relativePath: { eq: "nipuna-profile.jpg" }) {
+    profile: file(relativePath: { eq: "nipuna-profile.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 400, maxHeight: 400) {
           ...GatsbyImageSharpFluid

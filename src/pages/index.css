@@ -1,16 +1,35 @@
-.top-background {
-  background: linear-gradient(
+:root {
+  --background-color: #eee;
+  --border-color: #dfe3f8;
+  --background-hover-color: #f8f9ff;
+  --text-color: #000;
+  --header-gradient: linear-gradient(
     180deg,
     rgba(221, 239, 255, 1) 0%,
     rgba(255, 255, 255, 1) 100%
-  );
+  )
+}
+
+.dark-theme {
+  --background-color: #eee;
+  --border-color: #dfe3f8;
+  --background-hover-color: #f8f9ff;
+  --text-color: #000;
+}
+
+.hero-background {
+  background: var(--header-gradient);
 }
 
 .hero-container {
   display: flex;
   justify-content: space-between;
   padding: 30px 0;
-  border-bottom: 1px solid #dfe3f8;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-container h1 {
+  font-size: 2.5rem;
 }
 
 .hero-container .logo-item {
@@ -24,6 +43,7 @@
 .hero-container__profile-photo {
   border-radius: 50%;
   width: 280px;
+  transition: 200ms;
 }
 
 .hero-container__inner {
@@ -36,24 +56,34 @@
 .logo-items {
   display: flex;
   list-style: none;
+  align-items: baseline;
   margin: 0;
   padding: 0;
+}
+
+.logo-items a {
+  margin-right: 5px;
+  line-height: 0;
 }
 
 .section-title {
   display: flex;
   margin-top: 50px;
-  align-items: last baseline;
+  align-items: baseline;
 }
 
 .section-title-header {
   margin: 0;
-  font-weight: lighter;
+  font-weight: 400;
   margin-right: 10px;
 }
 
+.section-title a {
+  font-weight: 300;
+}
+
 .blog-post-container {
-  border-bottom: 1px solid #dfe3f8;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .blog-post-container__inner {
@@ -66,13 +96,16 @@
   min-width: 252px;
   flex-basis: 452px;
   padding: 40px;
-  border: 1px solid lightgrey;
+  border: 1px solid var(--border-color);
   margin-bottom: 20px;
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
+  transition: 200ms;
+  will-change: transform;
 }
 .blog-post-preview:hover {
-  background-color: #f8f9ff;
+  background-color: var(--background-hover-color);
+  transform: scale(1.05);
 }
 
 .blog-post-preview:nth-child(odd) {
@@ -96,7 +129,6 @@
   margin-left: 30px;
   min-width: 350px;
   height: 250px;
-  background-color: #eee;
 }
 
 @media only screen and (max-width: 700px) {
@@ -104,10 +136,6 @@
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
-  }
-
-  .logo-items {
-    justify-content: center;
   }
 
   .project-preview {
@@ -119,7 +147,6 @@
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
-    background-color: #eee;
     max-width: 80vw;
   }
 
