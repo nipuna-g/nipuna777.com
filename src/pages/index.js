@@ -19,40 +19,38 @@ const IndexPage = ({
 }) => (
   <Layout>
     <Seo title="Home" />
-    <FullWidthContent
-      style={{
-        background:
-          "linear-gradient(180deg, rgba(221,239,255,1) 0%, rgba(255,255,255,1) 100%)",
-      }}
-    >
-      <div className="hero-container">
-        <div className="hero-container__inner">
-          <h2 style={{ fontSize: "50px" }}>Nipuna Gunathilake</h2>
-          <p>
-            Hello! I am a software engineer who loves building great products.
-          </p>
-          <ul className="logo-items">
-            <a href="https://github.com/nipuna777/">
-              <GithubIcon aria-label="Github" className="logo-item" />
-            </a>
-            <a href="https://www.linkedin.com/in/nipuna777">
-              <LinkedInIcon className="logo-item" />
-            </a>
-            <a href="https://stackoverflow.com/users/3156644/nipuna777">
-              <StackOverflowIcon className="logo-item" />
-            </a>
-            <a href="mailto:nipuna777@gmail.com">
-              <EnvelopeIcon className="logo-item" />
-            </a>
-          </ul>
+    <div className="hero-background">
+      <FullWidthContent>
+        <div className="hero-container">
+          <div className="hero-container__inner">
+            <h1>Nipuna Gunathilake</h1>
+            <p>
+              Hello! I am a software engineer who loves building great products.
+            </p>
+            <ul className="logo-items">
+              <a href="https://github.com/nipuna777/">
+                <GithubIcon aria-label="Github" className="logo-item" />
+              </a>
+              <a href="https://www.linkedin.com/in/nipuna777">
+                <LinkedInIcon className="logo-item" />
+              </a>
+              <a href="https://stackoverflow.com/users/3156644/nipuna777">
+                <StackOverflowIcon className="logo-item" />
+              </a>
+              <a href="mailto:nipuna777@gmail.com">
+                <EnvelopeIcon className="logo-item" />
+              </a>
+            </ul>
+          </div>
+          <Img
+            className="hero-container__profile-photo"
+            fluid={profile.childImageSharp.fluid}
+            alt="Nipuna profile"
+          />
         </div>
-        <Img
-          className="hero-container__profile-photo"
-          fluid={profile.childImageSharp.fluid}
-          alt="Nipuna profile"
-        />
-      </div>
-    </FullWidthContent>
+      </FullWidthContent>
+    </div>
+
     <FullWidthContent>
       <div className="blog-post-container">
         <SectionTitle title="Blog Posts" viewAllLink="/blog" />
@@ -61,6 +59,7 @@ const IndexPage = ({
             .filter(edge => !edge.node.frontmatter.type)
             .map(edge => (
               <BlogPostPreview
+                key={edge.node.frontmatter.path}
                 title={edge.node.frontmatter.title}
                 excerpt={edge.node.excerpt}
                 path={edge.node.frontmatter.path}
@@ -78,6 +77,7 @@ const IndexPage = ({
       .map((edge, index) => (
         <ProjectPreview
           index={index}
+          key={edge.node.frontmatter.path}
           title={edge.node.frontmatter.title}
           excerpt={edge.node.excerpt}
           path={edge.node.frontmatter.path}
@@ -152,7 +152,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    profile: file(relativePath: { eq: "nipuna-profile.jpg" }) {
+    profile: file(relativePath: { eq: "nipuna-profile.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 400, maxHeight: 400) {
           ...GatsbyImageSharpFluid

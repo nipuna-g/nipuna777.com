@@ -7,7 +7,15 @@ import ReactMarkdown from "react-markdown";
 
 const occupations = [
   {
+    startDate: new Date(2022, 9),
+    endDate: null,
+    designation: "Senior Frontend Engineer",
+    organization: "Network Guard Limited",
+    details: `Network Guard is helping lead the way to a more private and digital world.`,
+  },
+  {
     startDate: new Date(2019, 3),
+    endDate: new Date(2022, 9),
     designation: "Senior Frontend Engineer",
     organization: "Beam Mobility (SG)",
   },
