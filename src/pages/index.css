@@ -5,7 +5,7 @@
   --text-color: #000;
   --header-gradient: linear-gradient(
     180deg,
-    rgba(221, 239, 255, 1) 0%,
+    rgba(221, 239, 255, .5) 0%,
     rgba(255, 255, 255, 1) 100%
   )
 }
@@ -30,6 +30,7 @@
 
 .hero-container h1 {
   font-size: 2.5rem;
+  margin-bottom: .5rem;
 }
 
 .hero-container .logo-item {
@@ -47,10 +48,15 @@
 }
 
 .hero-container__inner {
-  width: 400px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 20px;
+}
+
+.hero-container__inner p {
+  margin-bottom: .8rem;
 }
 
 .logo-items {
@@ -94,7 +100,8 @@
 }
 .blog-post-preview {
   min-width: 252px;
-  flex-basis: 452px;
+  width: 452px;
+  flex-grow: 1;
   padding: 40px;
   border: 1px solid var(--border-color);
   margin-bottom: 20px;
@@ -132,10 +139,23 @@
 }
 
 @media only screen and (max-width: 700px) {
+  .hero-container h1 {
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+  }
+
+  .logo-items {
+    justify-content: center;
+  }
+
   .hero-container {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
+  }
+
+  .hero-container__inner {
+    margin: 0;
   }
 
   .project-preview {

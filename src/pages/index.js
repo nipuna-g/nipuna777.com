@@ -26,6 +26,10 @@ const IndexPage = ({
             <h1>Nipuna Gunathilake</h1>
             <p>
               Hello! I am a software engineer who loves building great products.
+              Specializing in front end development.
+            </p>
+            <p>
+              Born and raised in Sri Lanka 🇱🇰, currently living in Singapore 🇸🇬.
             </p>
             <ul className="logo-items">
               <a href="https://github.com/nipuna777/">
