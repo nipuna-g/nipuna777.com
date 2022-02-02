@@ -7,7 +7,7 @@ import GithubIcon from "../images/icons/github.svg";
 import EnvelopeIcon from "../images/icons/envelope.svg";
 import LinkedInIcon from "../images/icons/linkedin.svg";
 import StackOverflowIcon from "../images/icons/stackoverflow.svg";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import "./index.css";
 import { graphql } from "gatsby";
 
@@ -46,12 +46,11 @@ const IndexPage = ({
               </a>
             </ul>
           </div>
-          <Img
+          <GatsbyImage
+            image={profile.childImageSharp.gatsbyImageData}
             className="hero-container__profile-photo"
-            fluid={profile.childImageSharp.fluid}
             loading="eager"
-            alt="Nipuna profile"
-          />
+            alt="Nipuna profile" />
         </div>
       </FullWidthContent>
     </div>
@@ -112,10 +111,9 @@ const ProjectPreview = ({ index, post, title, excerpt }) => (
           <p>{excerpt} </p>
           <a href="/work">Explore</a>
         </div>
-        <Img
-          className="project-preview__image"
-          fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
-        />
+        <GatsbyImage
+          image={post.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
+          className="project-preview__image" />
       </div>
     </FullWidthContent>
   </div>
@@ -135,34 +133,29 @@ const SectionTitle = ({ title, viewAllLink }) => (
   </div>
 );
 
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 150)
-          frontmatter {
-            path
-            title
-            type
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 350) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+export const pageQuery = graphql`{
+  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+    edges {
+      node {
+        id
+        excerpt(pruneLength: 150)
+        frontmatter {
+          path
+          title
+          type
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(width: 350, layout: CONSTRAINED)
             }
           }
         }
       }
     }
-    profile: file(relativePath: { eq: "nipuna-profile.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 400) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+  }
+  profile: file(relativePath: {eq: "nipuna-profile.jpeg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 400, height: 400, layout: CONSTRAINED)
     }
   }
+}
 `;

@@ -1,40 +1,40 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "nipuna777-home",
   "private": true,
   "description": "Nipuna Gunathilake home page",
   "version": "0.1.0",
   "author": "Nipuna Gunathilake <nipuna777@gmail.com>",
   "dependencies": {
-    "gatsby": "^3.10.0",
-    "gatsby-image": "^2.3.1",
-    "gatsby-plugin-google-analytics": "^2.3.0",
-    "gatsby-plugin-manifest": "^2.3.3",
-    "gatsby-plugin-offline": "^3.1.2",
-    "gatsby-plugin-react-helmet": "^3.2.1",
-    "gatsby-plugin-react-svg": "^3.0.0",
-    "gatsby-plugin-sharp": "^2.5.3",
-    "gatsby-source-filesystem": "^2.3.0",
-    "gatsby-transformer-remark": "^2.8.3",
-    "gatsby-transformer-sharp": "^2.4.3",
-    "prop-types": "^15.7.2",
+    "gatsby": "^4.6.1",
+    "gatsby-plugin-google-analytics": "^4.6.0",
+    "gatsby-plugin-image": "^2.6.0",
+    "gatsby-plugin-manifest": "^4.6.0",
+    "gatsby-plugin-offline": "^5.6.0",
+    "gatsby-plugin-react-helmet": "^5.6.0",
+    "gatsby-plugin-react-svg": "^3.1.0",
+    "gatsby-plugin-sass": "^5.6.0",
+    "gatsby-plugin-sharp": "^4.6.0",
+    "gatsby-source-filesystem": "^4.6.0",
+    "gatsby-transformer-remark": "^5.6.0",
+    "gatsby-transformer-sharp": "^4.6.0",
+    "prop-types": "^15.8.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1",
-    "react-markdown": "^6.0.2"
+    "react-helmet": "^6.1.0",
+    "react-markdown": "^8.0.0",
+    "sass": "^1.49.7"
   },
   "devDependencies": {
-    "babel-preset-gatsby": "^1.2.0",
-    "gatsby-plugin-sass": "^4.10.0",
-    "node-sass": "^6.0.1",
-    "prettier": "^1.19.1"
+    "babel-preset-gatsby": "^2.6.0",
+    "prettier": "^2.5.1"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "GATSBY_CONCURRENT_DOWNLOAD=50 gatsby build",
+    "develop": "GATSBY_CONCURRENT_DOWNLOAD=50 gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -43,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/nipuna777/nipuna777.com"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/nipuna777/nipuna777.com/issues"
   }
 }

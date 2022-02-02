@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import PageTitle from "../components/page-title";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import "./about.css";
 import { graphql } from "gatsby";
 
@@ -67,7 +67,7 @@ const AboutPage = ({ data: { profile } }) => (
           </ul>
         </div>
         <div style={{ minWidth: "250px", marginLeft: "30px" }}>
-          <Img fluid={profile.childImageSharp.fluid} alt="Nipuna profile" />
+          <GatsbyImage image={profile.childImageSharp.gatsbyImageData} alt="Nipuna profile" />
         </div>
       </div>
     </FullWidthContent>
@@ -76,14 +76,11 @@ const AboutPage = ({ data: { profile } }) => (
 
 export default AboutPage;
 
-export const pageQuery = graphql`
-  query {
-    profile: file(relativePath: { eq: "nipuna-profile.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 400) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const pageQuery = graphql`{
+  profile: file(relativePath: {eq: "nipuna-profile.jpeg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 400, height: 400, layout: CONSTRAINED)
     }
   }
+}
 `;

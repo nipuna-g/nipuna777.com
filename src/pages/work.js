@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import PageTitle from "../components/page-title";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import "./work.css";
 import { graphql } from "gatsby";
 
@@ -30,35 +30,32 @@ const WorkPage = ({
 };
 export default WorkPage;
 
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { type: { eq: "project" } } }
-    ) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 250)
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
-            title
-            technologies
-            sourceCode
-            link
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 250) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+export const pageQuery = graphql`{
+  allMarkdownRemark(
+    sort: {order: DESC, fields: [frontmatter___date]}
+    filter: {frontmatter: {type: {eq: "project"}}}
+  ) {
+    edges {
+      node {
+        id
+        excerpt(pruneLength: 250)
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          path
+          title
+          technologies
+          sourceCode
+          link
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(width: 250, layout: CONSTRAINED)
             }
           }
         }
       }
     }
   }
+}
 `;
 
 const pastalColors = [
@@ -127,10 +124,9 @@ const ProjectItem = ({ post, index }) => {
               marginLeft: 20,
             }}
           >
-            <Img
-              className="product-container__image"
-              fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
-            />
+            <GatsbyImage
+              image={post.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
+              className="product-container__image" />
           </div>
         </div>
       </FullWidthContent>

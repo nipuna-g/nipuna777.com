@@ -27,30 +27,27 @@ const BlogPage = ({
 };
 
 export default BlogPage;
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { type: { eq: null } } }
-    ) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 250)
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
-            title
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 200) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+export const pageQuery = graphql`{
+  allMarkdownRemark(
+    sort: {order: DESC, fields: [frontmatter___date]}
+    filter: {frontmatter: {type: {eq: null}}}
+  ) {
+    edges {
+      node {
+        id
+        excerpt(pruneLength: 250)
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          path
+          title
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(width: 200, layout: CONSTRAINED)
             }
           }
         }
       }
     }
   }
+}
 `;
