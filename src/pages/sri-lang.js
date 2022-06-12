@@ -3,57 +3,65 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import PageTitle from "../components/page-title";
+import { graphql } from "gatsby";
 
-const SriLangPage = () => (
+const SriLangPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+  const SriLangEntries = edges
+    .filter(edge => !!edge.node.frontmatter.date)
+    .map((edge, i) => (
+      <SriLangItem index={i} key={edge.node.id} post={edge.node} />
+    ));
+
+
+  return (
     <Layout>
-        <Seo title="Sri Lang" />
-        <FullWidthContent>
-            <PageTitle title="Sri-Lang" />
-        </FullWidthContent>
-        <FullWidthContent>
-            <div className="Sri-lang-container">
-                <h3>Day 0</h3>
-                <span>2022-06-06</span>
-                <p>
-                    This is the first dev note on Sri-Lang(not settled on a name yet).
-                </p>
-                <p>
-                    Sri-Lang will be a general purpouse language that can be written in Sinhalese(and in Tamil in v2).
-                </p>
-                <p>
-                    This will be a mainly for teaching programming to children using their mothertoung.
-                    The goal of the first itteration is to have a language that can be used to teach all the core programming concepts covered in the ICT A/L syllubus.
-                </p>
+      <Seo title="Sri Lang - Notes" />
+      <FullWidthContent>
+        <PageTitle title="Sri-Lang Notes" />
+      </FullWidthContent>
 
-                <h4>Definition of Done</h4>
-                <ul>
-                    <li>Have a language that can be used to teach the ICT syllubus in Sinhalese</li>
-                    <li>Be able to execute code examples locally</li>
-                    <li>Have a web-ide where users can play around with the language</li>
-                </ul>
-
-                <h5>Stretch Goals</h5>
-                <ul>
-                    <li>Have a Language server to make coding easier</li>
-                    <li>Video tutorials on the ICT syllubus</li>
-                    <li>A better programming font</li>
-                </ul>
-
-                <h5>V2</h5>
-                <ul>
-                    <li>Add Tamil support</li>
-                </ul>
-
-                <h4>Next steps</h4>
-                <ul>
-                    <li>Research into similar projects</li>
-                    <li>Decide on a syntax</li>
-                    <li>Learn more about building a language</li>
-                    <li>Start building!</li>
-                </ul>
-            </div>
-        </FullWidthContent>
+      <FullWidthContent>
+        {SriLangEntries}
+      </FullWidthContent>
     </Layout>
-);
+  )
+};
 
 export default SriLangPage;
+export const pageQuery = graphql`{
+    allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___date]}
+      filter: {frontmatter: {type: {eq: "sri-lang"}}}
+    ) {
+      edges {
+        node {
+          id
+          html
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+          }
+        }
+      }
+    }
+  }
+  `;
+
+const SriLangItem = ({ post, index }) => {
+  const date = post.frontmatter.date !== 'Invalid date' ? post.frontmatter.date : null; 
+  return (
+    <div className="Sri-lang-container">
+      <h3>{post.frontmatter.title} {date && `- ${date}`}</h3>
+      <div
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      ></div>
+      <hr />
+    </div>
+  );
+};

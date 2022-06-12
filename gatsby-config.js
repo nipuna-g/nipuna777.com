@@ -40,6 +40,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-project-pages`,
+        path: `${__dirname}/src/markdown-sri-lang`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-project-pages`,
         path: `${__dirname}/src/markdown-project-pages`,
       },
     },
