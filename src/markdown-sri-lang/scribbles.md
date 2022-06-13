@@ -1,7 +1,8 @@
 ---
 date: "0000-00-01"
 type: "sri-lang"
-title: "Scribble"
+title: "Scribbles"
+path: "/sri-lang/scribbles"
 ---
 
 ### This is the space for tangential ideas

@@ -1,0 +1,8 @@
+.sri-lang-post {
+  display: flex;
+  flex-direction: column;
+}
+
+.continue-reading {
+  margin: .75rem 0 1.5rem;
+}

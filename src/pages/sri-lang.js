@@ -4,6 +4,7 @@ import Seo from "../components/seo";
 import FullWidthContent from "../components/full-width-content";
 import PageTitle from "../components/page-title";
 import { graphql } from "gatsby";
+import './sri-lang.css'
 
 const SriLangPage = ({
   data: {
@@ -56,11 +57,13 @@ export const pageQuery = graphql`{
 const SriLangItem = ({ post, index }) => {
   const date = post.frontmatter.date !== 'Invalid date' ? post.frontmatter.date : null; 
   return (
-    <div className="Sri-lang-container">
+    <div className="sri-lang-post">
       <h3>{post.frontmatter.title} {date && `- ${date}`}</h3>
       <div
-        dangerouslySetInnerHTML={{ __html: post.html }}
+        dangerouslySetInnerHTML={{ __html: post.excerpt }}
       ></div>
+
+      <a href={post.frontmatter.path} className="continue-reading">Continue Reading...</a>
       <hr />
     </div>
   );
