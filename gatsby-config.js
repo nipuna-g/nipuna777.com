@@ -50,6 +50,13 @@ module.exports = {
         path: `${__dirname}/src/markdown-project-pages`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-blog-components`,
+        path: `${__dirname}/src/pages/blog/`,
+      },
+    },
     `gatsby-transformer-remark`,
     {
       resolve: "gatsby-plugin-react-svg",

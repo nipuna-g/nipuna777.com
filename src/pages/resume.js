@@ -9,9 +9,11 @@ const occupations = [
   {
     startDate: new Date(2022, 9),
     endDate: null,
-    designation: "Senior Frontend Engineer",
-    organization: "Network Guard Limited",
-    details: `Network Guard is helping lead the way to a more private and digital world.`,
+    designation: "Staff Frontend Engineer",
+    organization: "Network Guard (SG)",
+    details: `- Contributed to projects spanning multiple marketing sites helping improve customer lifetime value up to 10%. 
+- Made chapter wide tech and process improvements by introducing an RFC process and a engineering ticketing process.
+- Introduced tooling that helped creating new components up to 50% faster in the static marketing site.`,
   },
   {
     startDate: new Date(2019, 3),
