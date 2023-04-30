@@ -34,25 +34,24 @@ const SriLangPage = ({
 
 export default SriLangPage;
 export const pageQuery = graphql`{
-    allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___date]}
-      filter: {frontmatter: {type: {eq: "sri-lang"}}}
-    ) {
-      edges {
-        node {
-          id
-          html
-          excerpt(pruneLength: 250)
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
-            title
-          }
+  allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {type: {eq: "sri-lang"}}}
+  ) {
+    edges {
+      node {
+        id
+        html
+        excerpt(pruneLength: 250)
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          path
+          title
         }
       }
     }
   }
-  `;
+}`;
 
 const SriLangItem = ({ post, index }) => {
   const date = post.frontmatter.date !== 'Invalid date' ? post.frontmatter.date : null; 

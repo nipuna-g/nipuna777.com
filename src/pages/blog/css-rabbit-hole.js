@@ -61,18 +61,16 @@ const BlogPage = ({
 
 export default BlogPage;
 
-export const pageQuery = graphql`
-  {
-    allMarkdownRemark(
-      sort: { fields: fileAbsolutePath }
-      filter: { frontmatter: { type: { in: ["css-rabbit-hole"] } } }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          html
-        }
+export const pageQuery = graphql`{
+  allMarkdownRemark(
+    sort: {fileAbsolutePath: ASC}
+    filter: {frontmatter: {type: {in: ["css-rabbit-hole"]}}}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        html
       }
     }
   }
-`;
+}`;

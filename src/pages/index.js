@@ -134,7 +134,7 @@ const SectionTitle = ({ title, viewAllLink }) => (
 );
 
 export const pageQuery = graphql`{
-  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
     edges {
       node {
         id
@@ -157,5 +157,4 @@ export const pageQuery = graphql`{
       gatsbyImageData(width: 400, height: 400, layout: CONSTRAINED)
     }
   }
-}
-`;
+}`;

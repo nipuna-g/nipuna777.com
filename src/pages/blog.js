@@ -29,7 +29,7 @@ const BlogPage = ({
 export default BlogPage;
 export const pageQuery = graphql`{
   allMarkdownRemark(
-    sort: {order: DESC, fields: [frontmatter___date]}
+    sort: {frontmatter: {date: DESC}}
     filter: {frontmatter: {type: {eq: null}}}
   ) {
     edges {
@@ -49,5 +49,4 @@ export const pageQuery = graphql`{
       }
     }
   }
-}
-`;
+}`;

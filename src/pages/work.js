@@ -32,7 +32,7 @@ export default WorkPage;
 
 export const pageQuery = graphql`{
   allMarkdownRemark(
-    sort: {order: DESC, fields: [frontmatter___date]}
+    sort: {frontmatter: {date: DESC}}
     filter: {frontmatter: {type: {eq: "project"}}}
   ) {
     edges {
@@ -55,8 +55,7 @@ export const pageQuery = graphql`{
       }
     }
   }
-}
-`;
+}`;
 
 const pastalColors = [
   "#FFFFD877",
