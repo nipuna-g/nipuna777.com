@@ -32,16 +32,16 @@ const IndexPage = ({
               Born and raised in Sri Lanka 🇱🇰, currently living in Singapore 🇸🇬.
             </p>
             <ul className="logo-items">
-              <a href="https://github.com/nipuna777/">
+              <a href="https://github.com/nipuna-g/">
                 <GithubIcon aria-label="Github" className="logo-item" />
               </a>
-              <a href="https://www.linkedin.com/in/nipuna777">
+              <a href="https://www.linkedin.com/in/nipuna-g">
                 <LinkedInIcon className="logo-item" />
               </a>
-              <a href="https://stackoverflow.com/users/3156644/nipuna777">
+              <a href="https://stackoverflow.com/users/3156644/nipuna-g">
                 <StackOverflowIcon className="logo-item" />
               </a>
-              <a href="mailto:nipuna777@gmail.com">
+              <a href="mailto:nipuna@nipuna.dev">
                 <EnvelopeIcon className="logo-item" />
               </a>
             </ul>
@@ -50,7 +50,8 @@ const IndexPage = ({
             image={profile.childImageSharp.gatsbyImageData}
             className="hero-container__profile-photo"
             loading="eager"
-            alt="Nipuna profile" />
+            alt="Nipuna profile"
+          />
         </div>
       </FullWidthContent>
     </div>
@@ -60,8 +61,8 @@ const IndexPage = ({
         <SectionTitle title="Blog Posts" viewAllLink="/blog" />
         <div className="blog-post-container__inner">
           {edges
-            .filter(edge => !edge.node.frontmatter.type)
-            .map(edge => (
+            .filter((edge) => !edge.node.frontmatter.type)
+            .map((edge) => (
               <BlogPostPreview
                 key={edge.node.frontmatter.path}
                 title={edge.node.frontmatter.title}
@@ -77,7 +78,7 @@ const IndexPage = ({
     </FullWidthContent>
 
     {edges
-      .filter(edge => edge.node.frontmatter.type === "project")
+      .filter((edge) => edge.node.frontmatter.type === "project")
       .map((edge, index) => (
         <ProjectPreview
           index={index}
@@ -113,7 +114,8 @@ const ProjectPreview = ({ index, post, title, excerpt }) => (
         </div>
         <GatsbyImage
           image={post.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
-          className="project-preview__image" />
+          className="project-preview__image"
+        />
       </div>
     </FullWidthContent>
   </div>
@@ -133,28 +135,30 @@ const SectionTitle = ({ title, viewAllLink }) => (
   </div>
 );
 
-export const pageQuery = graphql`{
-  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
-    edges {
-      node {
-        id
-        excerpt(pruneLength: 150)
-        frontmatter {
-          path
-          title
-          type
-          featuredImage {
-            childImageSharp {
-              gatsbyImageData(width: 350, layout: CONSTRAINED)
+export const pageQuery = graphql`
+  {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 150)
+          frontmatter {
+            path
+            title
+            type
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(width: 350, layout: CONSTRAINED)
+              }
             }
           }
         }
       }
     }
-  }
-  profile: file(relativePath: {eq: "nipuna-profile.jpeg"}) {
-    childImageSharp {
-      gatsbyImageData(width: 400, height: 400, layout: CONSTRAINED)
+    profile: file(relativePath: { eq: "nipuna-profile.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(width: 400, height: 400, layout: CONSTRAINED)
+      }
     }
   }
-}`;
+`;

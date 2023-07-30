@@ -6,30 +6,25 @@ import "./resume.scss";
 import ReactMarkdown from "react-markdown";
 
 const occupations = [
+  // {
+  //   startDate: new Date(2022, 6),
+  //   organization: "ExpressVPN (SG)",
+  //   designation: "Staff Frontend Engineer",
+  // },
   {
-    startDate: new Date(2022, 6),
-    organization: "ExpressVPN (SG)",
-    designation: "Staff Frontend Engineer",
-  },
-  {
-    endDate: new Date(2022, 6),
+    // endDate: new Date(2022, 6),
     startDate: new Date(2021, 9),
-    designation: "Senior Frontend Engineer",
-    details: `- Architected and implemented a micro frontend architecture enabling the migration of legacy applications to a modern React stack. This change enabled the team to ship experiments and features up to 50% faster.  
-- Contributed to projects spanning multiple marketing sites helping improve customer lifetime value up to 10%. 
-- Made chapter wide tech and process improvements by introducing an RFC process and a engineering ticketing process.
-- Introduced tooling that helped creating new components up to 50% faster in the static marketing site.`,
+    designation: "Staff Frontend Engineer",
+    organization: "ExpressVPN (SG)",
+    details: `- Designed and implemented a web applications platform enabling the migration of legacy pages under one tech stack. This change enabled the team to ship experiments and features up to 50% faster.  
+- Brought in new engineering processes including an RFCs process for major changes, tech debt tickets, demo sessions, and pair-programming sessions.
+- Introduced tools such as Nx, react-testing-library for testing, Typescript, Cypress for E2E testing, Storybook for component development, increasing the team's productivity.`,
   },
   {
-    startDate: new Date(2019, 3),
     endDate: new Date(2021, 9),
+    startDate: new Date(2019, 3),
     designation: "Senior Frontend Engineer",
     organization: "Beam Mobility (SG)",
-  },
-  {
-    startDate: null,
-    endDate: null,
-    designation: "Frontend Engineer",
     details: `Beam is APAC's leading micromobility firm. Headquartered in Singapore, Beam operates over 30,000 vehicles across Australia, New Zealand, South Korea, and Malaysia. 
 - Led the development of the subscription feature bringing in ~10% of daily revenue. Collaborated with product managers, designers and developers to drive the project from RFC stage to completion.
 - Created a library of re-usable components using **styled-components** cutting down UI development time and reducing rework by up-to 50%. Utilized this library to overhaul the look and feel of the UI successfully in two weeks.
@@ -65,9 +60,9 @@ to the organization improving developer efficiency and happiness`,
   {
     startDate: new Date(2013, 10),
     endDate: new Date(2014, 2),
-    designation: "Software Engineering Intern ",
+    designation: "Software Engineering Intern",
     organization: "IFS R&D International (LK)",
-    details: `Developed applications for the Windows 8 Metro and Windows Phone 8 platforms`,
+    details: `- Developed applications for the Windows 8 Metro and Windows Phone 8 platforms`,
   },
 ];
 
@@ -109,19 +104,19 @@ const ResumePage = () => (
                 <strong>Phone:</strong> +6585150354
               </div>
               <div className="info-item info-item--left">
-                <strong>Email: </strong> nipuna777@gmail.com
+                <strong>Email: </strong> nipuna@nipuna.dev
               </div>
             </div>
 
             <div className="header-items">
               <div className="info-item">
                 <strong> Website:</strong>
-                <a href="https://nipuna777.com">nipuna777.com</a>
+                <a href="https://nipuna.dev">nipuna.dev</a>
               </div>
               <div className="info-item">
                 <strong> LinkedIn:</strong>
-                <a href="https://linkedin.com/in/nipuna777">
-                  linkedin.com/in/nipuna777
+                <a href="https://linkedin.com/in/nipuna-g">
+                  linkedin.com/in/nipuna-g
                 </a>
               </div>
             </div>
@@ -157,10 +152,11 @@ const ResumePage = () => (
 
           <ul className="section__no-style-list">
             <li>
-              Frontend Development:
+              Frontend Development:{" "}
               <strong>
                 HTML/CSS/SASS, JavaScript, TypeScript, ReactJS, React Native,
-                Angular
+                Angular, NextJS, Gatsby, Redux, ChakraUI, Styled Components,
+                Tailwind, MapboxGL, Storybook
               </strong>
             </li>
             <li>
@@ -169,26 +165,33 @@ const ResumePage = () => (
             <li>
               Other Tools & Technologies:{" "}
               <strong>
-                Git/Github, Figma, Gatsby, AWS, MapboxGL, CI/CD, Cypress,
-                Selenium, Jest
+                Git/GitHub, Figma, AWS, CI/CD, Cypress, Selenium, Jest, Nx
               </strong>
             </li>
           </ul>
         </div>
 
         <div className="section section-achivements">
-          <SectionHeader title="Achievements" />
+          <SectionHeader title="Other Achievements" />
 
           <h3 className="section__sub-title">Projects</h3>
           <ul>
+            <li>
+              Contributed to the{" "}
+              <a href="https://github.com/LSFLK/MedicinesforLK">
+                MedicinesforLK
+              </a>{" "}
+              project - A web application to connect donors and recipients of
+              medicines in Sri Lanka
+            </li>
             <li>
               Created a GTFS-RT Validator as part of Google Summer of Code 2015
               - Built a validator for General Transit Feed Real-Time
               Specifications
             </li>
-            <li>
+            {/* <li>
               Developed Train Tracking application as part of 3rd Year Project
-            </li>
+            </li> */}
             {/* <li>
               Developed a Customer Information System as the PGD project for BCS
               using the C# Language and the .Net framework
@@ -232,14 +235,16 @@ const SubSectionTitle = ({
 
   return (
     <div className="sub-section-title">
+      <span>
+        <span className="designation">{designation}</span> at{" "}
+        <span className="company">{organization}</span>
+      </span>
       {hideDates ? null : (
         <span className="duration">
           {dateFormatter.format(startDate)} -{" "}
           {endDate ? dateFormatter.format(endDate) : "Present"}
         </span>
       )}
-      <span className="company">{organization}</span>
-      <span className="designation">{designation}</span>
     </div>
   );
 };

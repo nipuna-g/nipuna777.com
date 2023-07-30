@@ -197,27 +197,22 @@ $primaryDark: #003e6b;
 .sub-section-title {
   display: flex;
   margin: 0.5em 0;
-  justify-content: space-evenly;
+  justify-content: space-between;
   font-size: 1.1em;
 
   .duration {
     color: $primary;
     font-weight: bold;
-    flex: 1;
   }
 
   .company {
     color: $primary;
     font-weight: bold;
-    flex: 1;
-    text-align: center;
   }
 
   .designation {
     color: $primary;
     font-weight: bold;
-    flex: 1;
-    text-align: right;
   }
 }
 
