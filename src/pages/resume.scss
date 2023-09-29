@@ -171,6 +171,19 @@ $primaryDark: #003e6b;
   margin-top: 0.5em;
 }
 
+.header-inline-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1em;
+  gap: 1em;
+}
+
+.header-inline-items span,a {
+  padding-right: 1em;
+  border-right: 2px dotted gray;
+}
+
 .sub-section {
   display: flex;
   flex-direction: column;
@@ -243,7 +256,7 @@ $primaryDark: #003e6b;
 
   * {
     font-family: "Crimson Text";
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   h1,
@@ -270,8 +283,9 @@ $primaryDark: #003e6b;
   }
 
   .section-header {
+    font-size: 1.1rem;
     margin: 0;
     padding: 0;
-    padding: 0.4em 0 0.2em;
+    padding: 0.6em 0 0.2em;
   }
 }
