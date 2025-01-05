@@ -6,18 +6,15 @@ import "./resume.scss";
 import ReactMarkdown from "react-markdown";
 
 const occupations = [
-  // {
-  //   startDate: new Date(2022, 6),
-  //   organization: "ExpressVPN (SG)",
-  //   designation: "Staff Frontend Engineer",
-  // },
   {
-    // endDate: new Date(2022, 6),
     startDate: new Date(2021, 9),
     designation: "Staff Frontend Engineer",
     organization: "ExpressVPN (SG)",
     details: `ExpressVPN is a leading VPN service provider enabling users to browse the internet privately.
 - Architected and led the implementation of a web applications platform that allowed moving legacy pages to React. This platform has enabled teams to ship experiments and features up to 50% faster.
+    - Initialized an Nx monorepo to host frontend libraries and applications that allowed for better code re-use and faster development. Cutting down duplicated CSS/JS by up-to 30%.
+    - Enforced good practices by setting up formatters, linters, type checkers(TypeScript with auto-generated OpenAPI clients), & test runners(Playwright, Jest, React Testing Library), greatly improving the developer experience.
+    - Implemented CI/CD pipelines that run on every PR creating preview environments & Storybook making it easier to test and review changes.
 - Brought in new engineering processes including RFCs and tech designs, formalized pair-programming, and tech-debt management. These processes along with mentoring helped improve the team's productivity and happiness.
 - Worked with cross-functional teams to ship multiple experiments improving the conversion rate by up to 20%.`,
   },
@@ -29,6 +26,7 @@ const occupations = [
     details: `Beam is APAC's leading micromobility firm. Headquartered in Singapore, Beam operates over 30,000 vehicles across Australia, New Zealand, South Korea, and Malaysia. 
 - Led the development of a subscription feature bringing in ~10% of daily revenue. Collaborated with product managers, designers and developers to drive the project from RFC stage to completion.
 - Created a library of re-usable components cutting down UI development time by upto 50%. Utilized this library to overhaul the look and feel of the UI successfully in two weeks while cutting down on the overall CSS.
+- Analyzed performance issues on the mobile application and helped improve the application load times and rendering times as the operations were scaled.
 - Took ownership of the maintenance of a legacy operations dashboard application written in HTML, CSS and JavaScript. Ensured that the application remained stable we scaled while making it more testable.`,
   },
   {
@@ -122,7 +120,7 @@ const ResumePage = () => (
           <SectionHeader title="Summary" />
 
           <p>
-            <b>Senior Frontend Engineer</b> with over 7 years of experience in
+            <b>Staff Frontend Engineer</b> with over 8 years of experience in
             building consumer-facing web applications. A pragmatic programmer
             committed to delivering products that delight the users by working
             with cross-functional teams. Passionate about building a good
@@ -195,7 +193,10 @@ const ResumePage = () => (
             <li>
               Created a GTFS-RT Validator as part of Google Summer of Code 2015
               - Built a validator for General Transit Feed Real-Time
-              Specifications
+              Specifications using Java & JS for the UI -{" "}
+              <a href="https://github.com/CUTR-at-USF/gtfs-realtime-validator">
+                https://github.com/CUTR-at-USF/gtfs-realtime-validator
+              </a>
             </li>
             {/* <li>
               Developed Train Tracking application as part of 3rd Year Project
