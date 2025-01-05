@@ -6,19 +6,17 @@ import "./resume.scss";
 import ReactMarkdown from "react-markdown";
 
 const occupations = [
-  // {
-  //   startDate: new Date(2022, 6),
-  //   organization: "ExpressVPN (SG)",
-  //   designation: "Staff Frontend Engineer",
-  // },
   {
-    // endDate: new Date(2022, 6),
     startDate: new Date(2021, 9),
     designation: "Staff Frontend Engineer",
     organization: "ExpressVPN (SG)",
-    details: `- Designed and implemented a web applications platform enabling the migration of legacy pages under one tech stack. This change enabled the team to ship experiments and features up to 50% faster.  
-- Brought in new engineering processes including an RFCs process for major changes, tech debt tickets, demo sessions, and pair-programming sessions.
-- Introduced tools such as Nx, react-testing-library for testing, Typescript, Cypress for E2E testing, Storybook for component development, increasing the team's productivity.`,
+    details: `ExpressVPN is a leading VPN service provider enabling users to browse the internet privately.
+- Architected and led the implementation of a web applications platform that allowed moving legacy pages to React. This platform has enabled teams to ship experiments and features up to 50% faster.
+    - Initialized an Nx monorepo to host frontend libraries and applications that allowed for better code re-use and faster development. Cutting down duplicated CSS/JS by up-to 30%.
+    - Enforced good practices by setting up formatters, linters, type checkers(TypeScript with auto-generated OpenAPI clients), & test runners(Playwright, Jest, React Testing Library), greatly improving the developer experience.
+    - Implemented CI/CD pipelines that run on every PR creating preview environments & Storybook making it easier to test and review changes.
+- Brought in new engineering processes including RFCs and tech designs, formalized pair-programming, and tech-debt management. These processes along with mentoring helped improve the team's productivity and happiness.
+- Worked with cross-functional teams to ship multiple experiments improving the conversion rate by up to 20%.`,
   },
   {
     endDate: new Date(2021, 9),
@@ -26,28 +24,27 @@ const occupations = [
     designation: "Senior Frontend Engineer",
     organization: "Beam Mobility (SG)",
     details: `Beam is APAC's leading micromobility firm. Headquartered in Singapore, Beam operates over 30,000 vehicles across Australia, New Zealand, South Korea, and Malaysia. 
-- Led the development of the subscription feature bringing in ~10% of daily revenue. Collaborated with product managers, designers and developers to drive the project from RFC stage to completion.
-- Created a library of re-usable components using **styled-components** cutting down UI development time and reducing rework by up-to 50%. Utilized this library to overhaul the look and feel of the UI successfully in two weeks.
-- Introduced new technologies to the frontend stack including **TypeScript, MapboxGL, React hooks, React Testing Library** 
-to the organization improving developer efficiency and happiness`,
+- Led the development of a subscription feature bringing in ~10% of daily revenue. Collaborated with product managers, designers and developers to drive the project from RFC stage to completion.
+- Created a library of re-usable components cutting down UI development time by upto 50%. Utilized this library to overhaul the look and feel of the UI successfully in two weeks while cutting down on the overall CSS.
+- Analyzed performance issues on the mobile application and helped improve the application load times and rendering times as the operations were scaled.
+- Took ownership of the maintenance of a legacy operations dashboard application written in HTML, CSS and JavaScript. Ensured that the application remained stable we scaled while making it more testable.`,
   },
   {
     startDate: new Date(2017, 1),
     endDate: new Date(2019, 2),
     designation: "Software Engineer",
     organization: "IFS R&D International (LK)",
-    details: `- Developed a complex **Angular** client for a planning and scheduling optimization application
-- Created and maintained a complete suite of automated tests using **Selenium**
-- Implemented lazy loaded modules for the single page application making it load 20% faster
-- Assisted the onboarding process of new engineers into the team`,
+    details: `- Developed a large-scale Angular client for a planning and scheduling optimization product leveraging advanced HTML/CSS and JavaScript features.
+- Created and maintained a complete suite of automated tests using Selenium making the application more stable and testable cutting down regressions by 70%.
+- Ensured that the application was accessible for all users by implementing accessibility features and testing it against multiple browsers and devices,`,
   },
   {
     startDate: new Date(2015, 10),
     endDate: new Date(2017, 0),
     designation: "User Interface Engineer",
     organization: "AccelAero (LK)",
-    details: `- Re-built major components of the internet booking system with **AngularJS** and associated technologies
-- Delivered an **Ionic** mobile application that has over 4.5/5 ratings on Play Store utilizing the same code base
+    details: `- Re-built major components of the internet booking system with AngularJS and associated technologies (HTML, CSS with Sass and JavaScript)
+- Delivered an Ionic mobile application that has over 4.5/5 ratings on Play Store utilizing the same code base
 - Produced a mobile website with theming support in less than a month through effective code re-use`,
   },
   // {
@@ -99,28 +96,37 @@ const ResumePage = () => (
             <div className="header-title">
               <h2>Nipuna Gunathilake</h2>
             </div>
-            <div className="header-items">
-              <div className="info-item info-item--left">
-                <strong>Phone:</strong> +6585150354
-              </div>
-              <div className="info-item info-item--left">
-                <strong>Email: </strong> nipuna@nipuna.dev
-              </div>
-            </div>
 
-            <div className="header-items">
-              <div className="info-item">
-                <strong> Website:</strong>
-                <a href="https://nipuna.dev">nipuna.dev</a>
-              </div>
-              <div className="info-item">
-                <strong> LinkedIn:</strong>
-                <a href="https://linkedin.com/in/nipuna-g">
-                  linkedin.com/in/nipuna-g
-                </a>
-              </div>
+            <div class="header-inline-items">
+              <span>Singapore</span>
+              <span>+6585150354</span>
+              <a style={{ display: "inline" }} href="mailto:nipuna@nipuna.dev">
+                nipuna@nipuna.dev
+              </a>
+              <a style={{ display: "inline" }} href="https://nipuna.dev">
+                nipuna.dev
+              </a>
+              <a
+                style={{ display: "inline" }}
+                href="https://linkedin.com/in/nipuna-g"
+              >
+                linkedin.com/in/nipuna-g
+              </a>
             </div>
           </div>
+        </div>
+
+        <div className="section section-work">
+          <SectionHeader title="Summary" />
+
+          <p>
+            <b>Staff Frontend Engineer</b> with over 8 years of experience in
+            building consumer-facing web applications. A pragmatic programmer
+            committed to delivering products that delight the users by working
+            with cross-functional teams. Passionate about building a good
+            engineering culture by setting up processes, mentoring and
+            empowering team members to do their best work.
+          </p>
         </div>
 
         <div className="section section-work">
@@ -154,8 +160,8 @@ const ResumePage = () => (
             <li>
               Frontend Development:{" "}
               <strong>
-                HTML/CSS/SASS, JavaScript, TypeScript, ReactJS, React Native,
-                Angular, NextJS, Gatsby, Redux, ChakraUI, Styled Components,
+                HTML/CSS/Sass, JavaScript, TypeScript, React, React Native,
+                Angular, AngularJS NextJS, Redux, ChakraUI, Styled Components,
                 Tailwind, MapboxGL, Storybook
               </strong>
             </li>
@@ -187,7 +193,10 @@ const ResumePage = () => (
             <li>
               Created a GTFS-RT Validator as part of Google Summer of Code 2015
               - Built a validator for General Transit Feed Real-Time
-              Specifications
+              Specifications using Java & JS for the UI -{" "}
+              <a href="https://github.com/CUTR-at-USF/gtfs-realtime-validator">
+                https://github.com/CUTR-at-USF/gtfs-realtime-validator
+              </a>
             </li>
             {/* <li>
               Developed Train Tracking application as part of 3rd Year Project
